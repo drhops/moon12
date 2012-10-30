@@ -10,5 +10,5 @@ def deploy():
 
 def prepare_deploy(branch):
     local('python manage.py test artful')
-    local('git add -p && git commit')
+    local('git add -p && git commit || :')
     local('git checkout master && git merge ' + branch)
