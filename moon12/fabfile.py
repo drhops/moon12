@@ -1,0 +1,14 @@
+from fabric.api import lcd
+from fabric.api import local
+
+def deploy():
+    with lcd('/Users/drhop/dev/moon12/deploy/'):
+        local('git pull /Users/drhop/dev/moon12/moon12')
+        local('python manage.py migrate artful')
+        local('python manage.py test artful')
+        #local('/my/command/to/restart/webserver')
+
+def prepare_deployment(branch_name):
+    local('python manage.py test artful')
+    local('git add -p && git commit')
+    local('git checkout master && git merge ' + branchname)
