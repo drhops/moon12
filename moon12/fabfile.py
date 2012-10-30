@@ -8,7 +8,7 @@ def deploy():
         local('python manage.py test artful')
         #local('/my/command/to/restart/webserver')
 
-def prepare_deploy(branch_name):
+def prepare_deploy(branch):
     local('python manage.py test artful')
     local('git add -p && git commit')
-    local('git checkout master && git merge ' + branchname)
+    local('git checkout master && git merge ' + branch)
