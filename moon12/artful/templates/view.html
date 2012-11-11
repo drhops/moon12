@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block libs %}
+  <script src="{{'/static/js/require-jquery.js'|hashformat(request)}}"></script>
+  <script type="text/javascript">
+    // disable the escape key in firefox because it does annoying things
+    $(document).keydown(function (e) { if (e.keyCode == 27) return false; });
+  </script>
+{% endblock %}
+
+<!--
+{% block loader %}
+{% include 'globals.html' %}
+{% endblock %}
+-->

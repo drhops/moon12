@@ -1,19 +1,19 @@
 from coffin import shortcuts
 from coffin.conf.urls.defaults import patterns, url
 from django.http import HttpResponse
-from django.template import RequestContext
+import jinja2
 
-def render_to_string(template, context, request=None):
-    if request:
-        context_instance = RequestContext(request)
-    else:
-        context_instance = None
-    return shortcuts.render_to_string(template, context, context_instance)
+@jinja2.contextfunction
+def get_context(c):
+  if '_context' in c:
+    return c['_context']
+  return c
 
-def render_to_response(template, context={}, request=None, mimetype="text/html"):
-    response = render_to_string(template, context, request)
-    return HttpResponse(response, mimetype=mimetype)
-  
+def render_to_response(template_file, context={}, request=None, mimetype="text/html"):
+  context['context'] = get_context
+  response = shortcuts.render_to_response(template_file, context)
+  return HttpResponse(response, mimetype=mimetype)
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
