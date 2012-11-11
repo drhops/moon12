@@ -1,0 +1,46 @@
+@charset "UTF-8";
+html,
+body{min-width:960px;}
+html{
+  /* background:#191919 url(../../images/splash/bg-page.gif) 50% 0; */
+  height:100%
+}
+body {
+  /* background:url(../../images/splash/bg-page-c.jpg) no-repeat 50% 0; */
+}
+
+.header {
+	width: 900px;
+	height: 160px;	
+	margin: 0 auto;
+}
+
+.left-nav {
+}
+
+.right-nav {
+	position: relative;
+	height:100%;
+	width:400px;
+}
+
+.right-nav-content {
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+
+.link-nav {
+	height: 100%;
+	float: left;
+	margin: 8px;
+	text-align: bottom;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}

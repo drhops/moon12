@@ -1,0 +1,6 @@
+{% set c = context() %}
+
+<li>
+	<div>Name: <a href="/artist/{{ c.sArtistId }}">{{ c.dArtist.full_name }}</a></div>
+	<div>Description: {{ c.dArtist.description }}</div>
+</li>

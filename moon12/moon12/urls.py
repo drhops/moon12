@@ -21,6 +21,10 @@ def render_to_response(template_file, context={}, request=None, mimetype="text/h
 urlpatterns = patterns('',
     url(r'^$', 'artful.views.root', name='root'),
     url(r'^opening$', 'artful.views.opening', name='opening'),
+    url(r'^about', 'artful.views.about', name='about'),
+    url(r'^events', 'artful.views.events', name='events'),
+    url(r'^exhibits$', 'artful.views.exhibits', name='exhibits'),
+    url(r'^artists$', 'artful.views.artists', name='artists'),
     url(r'^artist/([\w-]+)$', 'artful.views.artist', name='artist')
 
     # Examples:
