@@ -1,14 +1,14 @@
 {% set c = context() %}
 
 <li>
-	<a class="thumb" name="leaf" href="{{ c.dImage.source }}" title="{{ c.dImage.title }}">
-		<img src="{{ c.dImage.source_small }}" alt="{{ c.dImage.title }}" />
+	<a class="thumb" href="{{ c.dImage.source_slide }}" title="{{ c.dImage.title }}">
+		<img src="{{ c.dImage.source_thumb }}" alt="{{ c.dImage.title }}" width="90" height="90" />
 	</a>
 	<div class="caption">
 		<div class="image-title">{{ c.dImage.title }}</div>
-		<div class="image-desc">{{ c.dImage.description }}</div>
+		<div class="image-desc"><strong>{{ c.dImage.description }}</strong></div>
 		<div class="download">
-			<a href="{{ c.dImage.source_big }}">Download Original</a>
+			<a href="{{ c.dImage.source_image }}">Download Original</a>
 		</div>
 	</div>
 </li>

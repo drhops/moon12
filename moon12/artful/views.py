@@ -1,10 +1,14 @@
-# Create your views here.
-from artful.models import Artist, D_ARTISTS
+from artful.models import Artist, D_ARTISTS, D_EVENTS, D_EXHIBIT
 from moon12.urls import render_to_response
 
 
 def root(request):
-  return render_to_response('index.html', {})
+  dData = {
+    'dCurrentExhibit': D_EXHIBIT,
+    'dArtists': D_ARTISTS,
+    'dEvents': D_EVENTS,
+  }
+  return render_to_response('home.html', dData)
 
 def opening(request):
   return render_to_response('opening.html', {})
@@ -13,10 +17,19 @@ def about(request):
   return render_to_response('about.html', {})
 
 def events(request):
-  return render_to_response('events.html', {})
+  dData = {
+    'dEvents': D_EVENTS,
+  }
+  return render_to_response('events.html', dData)
 
 def exhibits(request):
-  return render_to_response('exhibits.html', {})
+  sCurrentArtistId = D_EXHIBIT['artist']
+  dData = {
+    'dCurrentExhibit': D_EXHIBIT,
+    'dCurrentArtist': D_ARTISTS[sCurrentArtistId],
+    'sCurrentArtistId': sCurrentArtistId,
+  }
+  return render_to_response('exhibits.html', dData)
 
 def artists(request):
   dData = {
@@ -24,12 +37,20 @@ def artists(request):
   }
   return render_to_response('artists.html', dData)
 
-def artist(request, sArtistName):
-  #oArtist = Artist.objects.get(username=sArtistname)
-  dArtist = D_ARTISTS.get(sArtistName)
+def artist(request, sArtistId):
+  dArtist = D_ARTISTS.get(sArtistId, {})
+  
+  for dImage in dArtist.get('images', []):
+    sSource = dImage.get('source')
+    dImage.update({
+      'source_image': '/static/images/artists/%s/album/%s' % (sArtistId, sSource),
+      'source_thumb': '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource),
+      'source_slide': '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource),
+    })
+  
   if not dArtist:
     pass
-    # return 404
+    # return 404    
   dData = {
     'dArtist': dArtist,
   }
