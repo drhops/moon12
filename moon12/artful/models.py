@@ -41,6 +41,56 @@ D_ARTISTS = {
     'email': 'drhops@gmail.com',
     'description': u'我見著了這海洋與大氣相接的海象，卻見不著海洋這物質的內在，我知其為 水，可這物質裡的世界為何，不可見。因其不可見而神祕，而可想像，有如人 這肉體的可見，而不可見其內在的精神性。--翁明崖',
     'home_image': '/static/images/artists/beach.jpg',
+    'images': [
+      {
+        'title': u'旅．形 - 石梯坪',
+        'description': 'DESCRIPTION',
+        'medium': u'油彩、畫布',
+        'dimensions': '30x30cm',
+        'year': '2009',
+        'source': '1-2.jpg'
+      },
+      {
+        'title': u'旅．形 - 鼻頭角',
+        'description': 'DESCRIPTION',
+        'medium': u'油彩、畫布',
+        'dimensions': '30x30cm',
+        'year': '2009',
+        'source': '1-3.jpg'
+      },
+      {
+        'title': u'石蓮花',
+        'description': 'DESCRIPTION',
+        'medium': u'油彩、畫布',
+        'dimensions': '25x25cm',
+        'year': '2012',
+        'source': '2.jpg',
+      },
+      {
+        'title': u'美麗與哀愁Ⅲ',
+        'description': 'DESCRIPTION',
+        'medium': u'油彩、畫布',
+        'dimensions': '50x100cm',
+        'year': '2010',
+        'source': '3.jpg',
+      },
+      {
+        'title': u'美麗與哀愁-Flora',
+        'description': 'DESCRIPTION',
+        'medium': u'油彩、畫布',
+        'dimensions': '50x100cm',
+        'year': '2011',
+        'source': '7.jpg',
+      },
+      {
+        'title': u'紅石榴',
+        'description': 'DESCRIPTION',
+        'medium': u'畫布、油彩',
+        'dimensions': '50x25cm',
+        'year': '2010',
+        'source': '8.jpg',
+      },
+    ]
   },
   'hong-tian-yu': {
     'full_name': u'洪天宇',
