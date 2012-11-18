@@ -123,6 +123,10 @@ body {
 	height: 500px;
 }
 
+.exhibit-invite {
+	border:1px solid #bbb;
+}
+
 /* ARTISTS */
 .artists {
 	margin-top: 30px;
