@@ -10,7 +10,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
+XDATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'moon12',                      # Or path to database file if using sqlite3.
@@ -124,7 +124,7 @@ INSTALLED_APPS = (
     'artful',
     'coffin',
     'gunicorn',
-    'south',
+    #'south',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
