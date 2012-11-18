@@ -11,12 +11,18 @@ EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
   'soap-making': {
+    'title': u'手工皂講座',
     'description': u'山月桂工作坊將在11/24於夢12美學空間舉辦手工皂講座，屆時有興趣的朋友都將可以免費參加，先來一睹為快，看看這些彷彿藝術品一般的手工皂吧！',
+    'dates': '11/24',
     'image': '/static/images/events/soap.jpg',
+    'future': True,
   },
   'opening': {
+    'title': u'夢12開幕',
     'description': u'十月二十七日下午三點夢12開幕了，當天超過百位好朋友從紐澤西、成都、台中、新竹趕來，帶來一場溫馨的聚會，各個角落散發著濃郁的友情。在這一刻，我們的夢想慢慢開始藴釀...',
+    'dates': '10/27',
     'image': '/static/images/events/opening.jpg',
+    'future': False,
   },
 }
 
@@ -389,7 +395,7 @@ adidas與Clarks隨後跟進。今天買到最有價值的不是鞋子，而是�
         'medium': u'壓克力鋁板',
         'dimensions': '244x122cm',
         'year': '2012',
-        'source': u'洪天宇_誰在乎呢.jpg',
+        'source': u'洪天宇_誰在乎呢？.jpg',
       },
       {
         'title': u'煉獄場的遊戲',  
@@ -443,7 +449,7 @@ adidas與Clarks隨後跟進。今天買到最有價值的不是鞋子，而是�
         'medium': u'壓克力鋁板',
         'dimensions': '244x122cm',
         'year': '2012',
-        'source': u'洪天宇_儘管去做吧.jpg',
+        'source': u'洪天宇_儘管去做吧！.jpg',
       },
       {
         'title': u'就用石油來解渴吧',  

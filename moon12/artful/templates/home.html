@@ -3,17 +3,20 @@
 {% block content %}
 
 <div class="home">
+<div id="page">
 <div class="exhibit home-section">
 	<a href="/exhibits">
-	<div>Current Exhibition</div>
+	<div><h3>Current Exhibition</h3></div>
+  </a>
 	<br>
   <div class="exhibit-info pull-left">
-  	<div>{{ dCurrentExhibit.title }}</div>
-  	<div>{{ dCurrentExhibit.subtitle }}</div>
-  	<div>{{ dCurrentExhibit.dates }}</div>
+  	<h2 style="font-weight:normal;">{{ dCurrentExhibit.title }}</h2><br>
+  	<div>{{ dCurrentExhibit.subtitle }}</div><br>
+  	<div>{{ dCurrentExhibit.dates }}</div><br>
   	<div>{{ dCurrentExhibit.description }}</div>
 	  <div class="clearfix"></div>
   </div>
+	<a href="/exhibits">
   <div class="pull-right">
   	<img class="exhibit-image" src="{{ dCurrentExhibit.image }}"/>
  	  <div class="clearfix"></div>
@@ -22,7 +25,9 @@
   <div class="clearfix"></div>  
 </div>
 <div class="artists home-section">
-	<a href="/artists"><div>Artists</div></a>
+	<a href="/artists">
+	<h3>Artists</h3>
+	</a>
 	<br>
 	{% set _firstArtist = true %}
   {% for sArtistId, dArtist in dArtists.iteritems() %}
@@ -41,7 +46,8 @@
 </div>
 <div class="events home-section">
 	<a href="/events">
-	<div>Events</div>
+	<div><h3>Events</h3></div>
+	</a>
 	<br>	
   {% for sEventId, dEvent in dEvents.iteritems() %}
     {% set _context = c %}
@@ -51,12 +57,12 @@
     }) %}
 	  {% include 'home_event_frag.html' %}
   {% endfor %}
-	</a>
   <div class="clearfix"></div>  	
 </div>
 <div class="gallery home-section">
 	<a href="/about">
-	<div>Gallery</div>
+	<div><h3>Gallery</h3></div>
+	</a>
 	<br>
 	<div class="gallery-description pull-left">
 夢12 - 築夢的話<br>
@@ -73,20 +79,13 @@
 與您一起築夢、織夢、圓夢！<br>
 	</div>
 	<div class="pull-right">
+	<a href="/about">
 		<img class="gallery-image" src="/static/images/gallery.jpg"/>
  	  <div class="clearfix"></div>
-	</div>
 	</a>
+	</div>
  	<div class="clearfix"></div>
 </div>
 </div>
-
-
-<!--
-  <center><img src="/static/images/moon.png" usemap="#linkmap"/></center>
-  <map name="linkmap">
-    <area shape="rect" coords="50,45,179,95" href="/opening" alt="Opening invitation">
-    <area shape="rect" coords="180,45,320,95" href="http://www.facebook.com/moon12art" alt="Facebook page for Moon 12 Art">
-  </map>
--->
+</div>
 {% endblock %}

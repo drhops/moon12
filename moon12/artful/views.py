@@ -19,6 +19,8 @@ def about(request):
 def events(request):
   dData = {
     'dEvents': D_EVENTS,
+    'dFutureEvents': dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') == True),
+    'dPastEvents': dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') != True),
   }
   return render_to_response('events.html', dData)
 

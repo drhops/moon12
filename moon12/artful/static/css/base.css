@@ -6,7 +6,7 @@ html{
   height:100%
 }
 body {
-  /* background:url(../../images/splash/bg-page-c.jpg) no-repeat 50% 0; */
+  /* background:url(../images/canvas.jpg) no-repeat 50% 0; */
 }
 
 /* HEADER */
@@ -14,6 +14,9 @@ body {
 	width: 960px;
 	height: 160px;	
 	margin: 0 auto;
+	border-color: #bbb;
+	border-style: none none solid none;
+	border-width: 0px 0px 2px 0px;	
 }
 
 .left-nav {
@@ -54,11 +57,17 @@ body {
 	margin: 0 auto;
 }
 
+.home h3 {
+	text-align: center;
+}
+
 .home-section {
   width:100%;
-	border:5px solid red;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	border-color: #eee;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;	
+	margin-top: 30px;
+	
 }
 
 .home .exhibit-info {
@@ -74,6 +83,7 @@ body {
 	width:180px;
 	float:left;
 	margin-left:3px;
+	padding-bottom:10px;
 }
 
 .home .artist-name {
@@ -82,8 +92,8 @@ body {
 }
 
 .home .artist-image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 .home .event-section {
@@ -106,16 +116,79 @@ body {
 /* EXHIBITS */
 .exhibit-current {
 	text-align: center;
-	margin: 0 auto;	
+	margin: 15px 0px auto;	
+}
+
+.exhibit-image {
+	height: 500px;
+}
+
+/* ARTISTS */
+.artists {
+	margin-top: 30px;
+}
+
+.page-title {
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;
+	width: 100%;
+}
+
+.artist {
+	margin-bottom: 40px;
+}
+
+.artist-name {
+	font-size:1.4em;
+	height:30px;
+}
+
+.artist-left {
+	width:180px;
+	text-align: center;
+}
+
+.artist .artist-image {
+	width:180px;
+}
+
+.artist-right {
+	margin-left:30px;
+	width: 750px;
+}
+
+.artist .extraneous-link {
+	margin-top:5px;
+	font-size:0.9em;
+}
+
+/* EVENTS */
+.events {
+	margin-top: 30px;
+}
+
+.event-image {
+	max-width: 400px;
+}
+
+.event-blurb {
+	width:500px;
+	margin-left:25px;
 }
 
 /* ABOUT */
 .about {
 	text-align: center;
-	margin: 0 auto;	
+	margin: 15px 0px auto;	
 }
 
 /* COMMON */
+
+.moon-red {
+	color: #EF4135;	
+}
+
 .pull-left {
   float: left;
 }
@@ -125,8 +198,8 @@ body {
 }
 
 .verticalDivider {
-   border-right:2px solid black; 
-   height:85px;
+   border-right:1px solid #ddd; 
+   height:60px;
    width:1px;
 } 
 

@@ -2,24 +2,28 @@
 
 {% block content %}
 <div class="exhibits">
-Current Exhibition:<br><br>
+<div id="page">
 
 <div class="exhibit-current">
   <div class="exhibit-info">
-  	<div>{{ dCurrentExhibit.title }}</div>
+  	<h2 style="font-weight:normal";>{{ dCurrentExhibit.title }}</h2><br>
   	<div>{{ dCurrentExhibit.subtitle }}</div>
-  	<div>{{ dCurrentExhibit.dates }}</div>
-  	<div>{{ dCurrentExhibit.description }}</div>
+  	<div>{{ dCurrentExhibit.dates }}</div><br>
+  	<div>{{ dCurrentExhibit.description }}</div><br>  	
+歡迎您蒞臨參觀<br><br>
 	  <div class="clearfix"></div>
   </div>
+	<a href="/artist/{{ sCurrentArtistId }}">
   <div>
   	<img class="exhibit-image" src="{{ dCurrentExhibit.image }}"/>
  	  <div class="clearfix"></div>
   </div>
 	<div>
-	<a href="/artist/{{ sCurrentArtistId }}">Artist: {{ dCurrentArtist.full_name }}</a>
+	{{ dCurrentArtist.full_name }}
 	</div>
+	</a>
 </div>
 
+</div>
 </div>
 {% endblock %}

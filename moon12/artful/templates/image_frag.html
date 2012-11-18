@@ -6,7 +6,7 @@
 	</a>
 	<div class="caption">
 		<div class="image-title">{{ c.dImage.title }}</div>
-		<div class="image-desc"><strong>{{ c.dImage.description }}</strong></div>
+		<div class="image-desc">{{ c.dImage.description|safe }}</div>
 		<div class="download">
 			<a href="{{ c.dImage.source_image }}">Download Original</a>
 		</div>

@@ -5,12 +5,12 @@ html, body {
 body{
 	text-align: center;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
-	background-color: #111;
-	color: #bbb;
-	font-size: 75%;
+	background-color: #fff;
+	color: #000;
 }
+
 a{
-	color: #f70;
+	color: #021896;
 	text-decoration: none;
 }
 a:focus, a:hover, a:active {
@@ -26,26 +26,28 @@ h1, h2 {
 h1 {
 	padding: 0;
 	font-size:3em;
-	color: #ccc;
+	color: #EF4135;
 	letter-spacing:-1px;
 }
 h2 {
 	padding-top: 10px;
-	font-size:2em;
+	font-size:1.4em;
 	letter-spacing:-1px;
 }
 pre {
 	font-size: 1.2em;
 	line-height: 1.2em;
 }
+
+.artist div#page {
+	font-size: 75%;
+}
+
 div#page {
 	width: 960px;
-	background-color: #000;
+	background-color: #fff;
 	margin: 0 auto;
 	text-align: left;
-	border-color: #222;
-	border-style: none solid solid;
-	border-width: medium 1px 1px;
 }
 div#container {
 	padding: 20px;
@@ -78,7 +80,7 @@ ul.meta li {
 	list-style: none;
 }
 div.caption-container {
-	color: #eee;
+	color: #000;
 }
 div.image-title {
 	font-weight: bold;
@@ -92,10 +94,10 @@ div.photo-index {
 	color: #888;
 }
 div.navigation a.prev {
-	background-image: url(images/prevPageArrowWhite.gif);
+	background-image: url(images/prevPageArrowBlack.gif);
 }
 div.navigation a.next {
-	background-image: url(images/nextPageArrowWhite.gif);
+	background-image: url(images/nextPageArrowBlack.gif);
 }
 div.loader {
 	background-image: url('images/loaderWhite.gif');
