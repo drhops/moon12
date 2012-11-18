@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="events home-section">
+	<div>Events</div>
+	<br>	
+  {% for sEventId, dEvent in dEvents.iteritems() %}
+    {% set _context = c %}
+    {% do _context.update({
+      'dEvent': dEvent,
+      'sEventId': sEventId,
+    }) %}
+	  {% include 'home_event_frag.html' %}
+  {% endfor %}
+  <div class="clearfix"></div>  	
+</div>
+{% endblock %}

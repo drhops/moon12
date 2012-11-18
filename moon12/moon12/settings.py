@@ -1,4 +1,5 @@
 # Django settings for moon12 project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -87,6 +88,11 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+ROOT_PATH = os.path.dirname(__file__)
+TEMPLATE_DIRS = (
+    os.path.join(ROOT_PATH, 'artful/templates'),
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -115,8 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
     'artful',
+    'coffin',
+    'south',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -151,3 +158,10 @@ LOGGING = {
         },
     }
 }
+
+JINJA2_EXTENSIONS = (
+    'jinja2.ext.do',
+)
+
+JINJA2_FILTERS = (
+)

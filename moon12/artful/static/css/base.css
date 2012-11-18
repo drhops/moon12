@@ -1,0 +1,152 @@
+@charset "UTF-8";
+html,
+body{min-width:960px;}
+html{
+  /* background:#191919 url(../../images/splash/bg-page.gif) 50% 0; */
+  height:100%
+}
+body {
+  /* background:url(../../images/splash/bg-page-c.jpg) no-repeat 50% 0; */
+}
+
+/* HEADER */
+.header {
+	width: 960px;
+	height: 160px;	
+	margin: 0 auto;
+}
+
+.left-nav {
+}
+
+.right-nav {
+	position: relative;
+	height:100%;
+	width:400px;
+}
+
+.right-nav-content {
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+
+.link-nav {
+	height: 100%;
+	float: left;
+	margin: 8px;
+	text-align: bottom;
+}
+
+/* FOOTER */
+.footer {
+  width: 960px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+
+.copyright {
+}
+
+/* HOME */
+.home {
+  width: 960px;
+	margin: 0 auto;
+}
+
+.home-section {
+  width:100%;
+	border:5px solid red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.home .exhibit-info {
+	width:50%
+}
+
+.home .exhibit-image {
+	width: 300px;
+	height: 300px;
+}
+
+.home .artist-section {
+	width:180px;
+	float:left;
+	margin-left:3px;
+}
+
+.home .artist-name {
+	width:70px;
+	text-align:center;
+}
+
+.home .artist-image {
+  width: 100px;
+  height: 100px;
+}
+
+.home .event-section {
+}
+
+.home .event-blurb {
+	margin-right:10px;
+	margin-left:10px;
+	width: 240px;
+}
+
+.home .event-image {
+	width: 220px;	
+}
+
+.home .gallery-image {
+	height: 300px;
+}
+
+/* EXHIBITS */
+.exhibit-current {
+	text-align: center;
+	margin: 0 auto;	
+}
+
+/* ABOUT */
+.about {
+	text-align: center;
+	margin: 0 auto;	
+}
+
+/* COMMON */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.verticalDivider {
+   border-right:2px solid black; 
+   height:85px;
+   width:1px;
+} 
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}

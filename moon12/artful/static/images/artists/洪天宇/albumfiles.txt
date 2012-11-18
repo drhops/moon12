@@ -1,0 +1,24 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+# and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+-儘管去做吧！.docx
+儘管去做吧！_2012_壓克力鋁板_244x122cm.jpg
+-划得來嗎.docx
+划得來嗎_2012_壓克力鋁板_244x122cm.jpg
+-就用石油來解渴吧.docx
+就用石油來解渴吧_2012_壓克力鋁板_244x122cm.jpg
+-文明的路徑.docx
+文明的路徑_2011_壓克力鋁板_244x122cm.jpg
+-煉獄場的遊戲.docx
+煉獄場的遊戲_2012_壓克力鋁板_244x122 cm.jpg
+-用腳趾思考.docx
+用腳趾思考_2012_壓克力鋁板_244x122cm.jpg
+-誰在乎呢？.docx
+誰在乎呢？_2012_壓克力鋁板_244x122cm.jpg
+-雨林的輓歌.docx
+雨林的輓歌_2011_壓克力鋁板_244x122cm.jpg

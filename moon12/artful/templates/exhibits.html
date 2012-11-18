@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="exhibits">
+Current Exhibition:<br><br>
+
+<div class="exhibit-current">
+  <div class="exhibit-info">
+  	<div>{{ dCurrentExhibit.title }}</div>
+  	<div>{{ dCurrentExhibit.subtitle }}</div>
+  	<div>{{ dCurrentExhibit.dates }}</div>
+  	<div>{{ dCurrentExhibit.description }}</div>
+	  <div class="clearfix"></div>
+  </div>
+  <div>
+  	<img class="exhibit-image" src="{{ dCurrentExhibit.image }}"/>
+ 	  <div class="clearfix"></div>
+  </div>
+	<div>
+	<a href="/artist/{{ sCurrentArtistId }}">Artist: {{ dCurrentArtist.full_name }}</a>
+	</div>
+</div>
+
+</div>
+{% endblock %}

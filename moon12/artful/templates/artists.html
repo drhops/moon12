@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="artists">
+Artists:<br>
+<div>
+	<ul class="artists-list">
+	  {% for sArtistId, dArtist in dArtists.iteritems() %}
+	    {% set _context = c %}
+	    {% do _context.update({
+	      'dArtist': dArtist,
+	      'sArtistId': sArtistId,
+	    }) %}
+		  {% include 'artist_frag.html' %}
+	  {% endfor %}
+	</ul>	
+</div>
+
+</div>
+{% endblock %}
