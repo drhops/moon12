@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'artful',
     'coffin',
+    'gunicorn',
     'south',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
