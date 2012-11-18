@@ -202,7 +202,7 @@ D_ARTISTS = {
         'medium': u'油彩、畫布',
         'dimensions': '30x30cm',
         'year': '2009',
-        'source': '翁明崖_1-2.jpg'
+        'source': u'翁明崖_1-2.jpg'
       },
       {
         'title': u'旅．形 - 鼻頭角',
@@ -210,7 +210,7 @@ D_ARTISTS = {
         'medium': u'油彩、畫布',
         'dimensions': '30x30cm',
         'year': '2009',
-        'source': '翁明崖_1-3.jpg'
+        'source': u'翁明崖_1-3.jpg'
       },
       {
         'title': u'石蓮花',
@@ -218,7 +218,7 @@ D_ARTISTS = {
         'medium': u'油彩、畫布',
         'dimensions': '25x25cm',
         'year': '2012',
-        'source': '翁明崖_2.jpg',
+        'source': u'翁明崖_2.jpg',
       },
       {
         'title': u'美麗與哀愁Ⅲ',
@@ -226,7 +226,7 @@ D_ARTISTS = {
         'medium': u'油彩、畫布',
         'dimensions': '50x100cm',
         'year': '2010',
-        'source': '翁明崖_3.jpg',
+        'source': u'翁明崖_3.jpg',
       },
       {
         'title': u'美麗與哀愁-Flora',
@@ -234,7 +234,7 @@ D_ARTISTS = {
         'medium': u'油彩、畫布',
         'dimensions': '50x100cm',
         'year': '2011',
-        'source': '翁明崖_7.jpg',
+        'source': u'翁明崖_7.jpg',
       },
       {
         'title': u'紅石榴',
@@ -242,7 +242,7 @@ D_ARTISTS = {
         'medium': u'畫布、油彩',
         'dimensions': '50x25cm',
         'year': '2010',
-        'source': '翁明崖_8.jpg',
+        'source': u'翁明崖_8.jpg',
       },
     ],
   },
