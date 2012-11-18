@@ -143,7 +143,7 @@ body {
 	margin-bottom: 40px;
 }
 
-.artist-name {
+.artist .artist-name {
 	font-size:1.4em;
 	height:30px;
 }
