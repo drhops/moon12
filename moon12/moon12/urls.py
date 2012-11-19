@@ -25,7 +25,8 @@ urlpatterns = patterns('',
     url(r'^events', 'artful.views.events', name='events'),
     url(r'^exhibits$', 'artful.views.exhibits', name='exhibits'),
     url(r'^artists$', 'artful.views.artists', name='artists'),
-    url(r'^artist/([\w-]+)$', 'artful.views.artist', name='artist')
+    url(r'^artist/([\w-]+)/bio$', 'artful.views.artist_bio', name='artist_bio'),
+    url(r'^artist/([\w-]+)/gallery$', 'artful.views.artist_gallery', name='artist_gallery'),
 
     # Examples:
     # url(r'^$', 'moon12.views.home', name='home'),

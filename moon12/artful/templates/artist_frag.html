@@ -1,19 +1,20 @@
 {% set c = context() %}
 
-<div class="artist">
+<div class="artist pull-left">
 	<div class="artist-left pull-left">
 		<a href="/artist/{{ c.sArtistId }}">
-		<div class="artist-name">{{ c.dArtist.full_name }}</div>
 		<img class="artist-image" src="{{ c.dArtist.home_image }}"/>
 		</a>
 	  <div class="clearfix"></div>  	
 	</div>
 	
 	<div class="artist-right pull-left">
-		<div class="artist-name">&nbsp;</div>
-		<div>{{ c.dArtist.description }}</div>
-		<div class="extraneous-link">
-		<a href="/artist/{{ c.sArtistId }}">view artwork</a>
+		<div class="artist-name">{{ c.dArtist.full_name }}</div>
+		<div class="bio-link">
+			<a href="/artist/{{ c.sArtistId }}/bio">view bio</a>
+		</div>
+		<div class="gallery-link">
+			<a href="/artist/{{ c.sArtistId }}/gallery">view artwork</a>
 		</div>
 	  <div class="clearfix"></div>  	
 	</div>

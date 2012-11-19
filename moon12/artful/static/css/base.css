@@ -82,13 +82,20 @@ body {
 .home .artist-section {
 	width:180px;
 	float:left;
-	margin-left:3px;
+	margin-left:5px;
 	padding-bottom:10px;
 }
 
 .home .artist-name {
-	width:70px;
+	width:80px;
 	text-align:center;
+	display:table;
+	height:70px;
+}
+
+.home .artist-name .cell {
+	display:table-cell;
+	vertical-align:middle;
 }
 
 .home .artist-image {
@@ -143,28 +150,37 @@ body {
 	margin-bottom: 40px;
 }
 
+.artist-container {
+	
+}
+
 .artist .artist-name {
-	font-size:1.4em;
+	color: #5F574F;
+	font-size:1.2em;
 	height:30px;
 }
 
 .artist-left {
-	width:180px;
 	text-align: center;
 }
 
 .artist .artist-image {
-	width:180px;
+	width:250px;
+	height:250px;
 }
 
 .artist-right {
 	margin-left:30px;
-	width: 750px;
+	width: 200px;
 }
 
-.artist .extraneous-link {
+.artist .gallery-link {
 	margin-top:5px;
-	font-size:0.9em;
+	font-size:0.8em;
+}
+.artist .bio-link {
+	margin-top:5px;
+	font-size:0.8em;
 }
 
 /* EVENTS */
@@ -185,6 +201,36 @@ body {
 .about {
 	text-align: center;
 	margin: 15px 0px auto;	
+}
+
+.about-left {
+	width:50%;
+}
+
+.about-right {
+	width:50%;
+}
+
+.about .gallery-image {
+	width:480px;
+}
+
+.about .facebook-icon {
+	vertical-align:top;
+	width:17px;
+	height:17px;
+}
+
+.about-contact {
+	margin-top: 30px;
+}
+
+.about-contact div {
+	margin-top:7px;
+}
+
+.about-map {
+	margin-top: 30px;
 }
 
 /* COMMON */

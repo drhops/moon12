@@ -6,16 +6,18 @@
 
 <div class="page-title">Artists</div><br>
 
-<div>
-  {% for sArtistId, dArtist in dArtists.iteritems() %}
+<div class="artists-container">
+  {% for sArtistId in lsArtists %}
     {% set _context = c %}
     {% do _context.update({
-      'dArtist': dArtist,
+      'dArtist': dArtists.get(sArtistId),
       'sArtistId': sArtistId,
     }) %}
 	  {% include 'artist_frag.html' %}
   {% endfor %}
+<div class="clearfix"></div>  	
 </div>
+
 </div>
 </div>
 {% endblock %}

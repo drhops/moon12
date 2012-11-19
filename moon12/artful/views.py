@@ -3,10 +3,15 @@ from moon12.urls import render_to_response
 
 
 def root(request):
+  lsArtists = list((k, v) for k, v in D_ARTISTS.iteritems())
+  lsArtists.sort(key=lambda (k,v): v['display_order'])
+  lsArtists = [k for (k, v) in lsArtists]
+  
   dData = {
     'dCurrentExhibit': D_EXHIBIT,
     'dArtists': D_ARTISTS,
-    'dEvents': D_EVENTS,
+    'lsArtists': lsArtists,
+    'dEvents': D_EVENTS, 
   }
   return render_to_response('home.html', dData)
 
@@ -34,12 +39,17 @@ def exhibits(request):
   return render_to_response('exhibits.html', dData)
 
 def artists(request):
+  lsArtists = list((k, v) for k, v in D_ARTISTS.iteritems())
+  lsArtists.sort(key=lambda (k,v): v['display_order'])
+  lsArtists = [k for (k, v) in lsArtists]
+  
   dData = {
     'dArtists': D_ARTISTS,
+    'lsArtists': lsArtists,
   }
   return render_to_response('artists.html', dData)
 
-def artist(request, sArtistId):
+def artist_bio(request, sArtistId):
   dArtist = D_ARTISTS.get(sArtistId, {})
   
   for dImage in dArtist.get('images', []):
@@ -56,4 +66,23 @@ def artist(request, sArtistId):
   dData = {
     'dArtist': dArtist,
   }
-  return render_to_response('artist.html', dData)
+  return render_to_response('artist/bio.html', dData)
+
+def artist_gallery(request, sArtistId):
+  dArtist = D_ARTISTS.get(sArtistId, {})
+  
+  for dImage in dArtist.get('images', []):
+    sSource = dImage.get('source')
+    dImage.update({
+      'source_image': '/static/images/artists/%s/album/%s' % (sArtistId, sSource),
+      'source_thumb': '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource),
+      'source_slide': '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource),
+    })
+  
+  if not dArtist:
+    pass
+    # return 404    
+  dData = {
+    'dArtist': dArtist,
+  }
+  return render_to_response('artist/gallery.html', dData)

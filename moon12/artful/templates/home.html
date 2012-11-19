@@ -30,14 +30,13 @@
 	</a>
 	<br>
 	{% set _firstArtist = true %}
-  {% for sArtistId, dArtist in dArtists.iteritems() %}
+  {% for sArtistId in lsArtists %}
     {% set _context = c %}
     {% do _context.update({
-      'dArtist': dArtist,
+      'dArtist': dArtists.get(sArtistId),
       'sArtistId': sArtistId,
     }) %}
 	  {% if not _firstArtist %}
-	  	<div class="verticalDivider pull-left"></div>
 		{% endif %}
 		{% set _firstArtist = false %}
 	  {% include 'home_artist_frag.html' %}	  	

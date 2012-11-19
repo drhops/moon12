@@ -2,13 +2,17 @@
 
 <a href="/artist/{{ c.sArtistId }}">
 <div class="artist-section">
-  <div class="artist-name pull-left">
-  	{{ c.dArtist.full_name }}
-	  <div class="clearfix"></div>  
-  </div>
   <div class="pull-left">
   	<img class="artist-image" src="{{ c.dArtist.home_image }}"/>
 	  <div class="clearfix"></div>  
+  </div>
+  <div class="artist-name pull-left">
+  	<div class="cell">
+  	<div class="content">
+  	{{ c.dArtist.full_name }}
+  	</div>
+  	</div>
+	  <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>  
 </div>
