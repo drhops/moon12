@@ -57,8 +57,20 @@ body {
 	margin: 0 auto;
 }
 
-.home h3 {
+.home .section-title {
+	font-size:1.4em;
 	text-align: center;
+	color: #5F574F;
+}
+
+.home a {
+	color: #5F574F;
+	text-decoration: none;
+}
+
+.home a:focus, a:hover, a:active {
+	color: #5F574F;
+	text-decoration: underline;
 }
 
 .home-section {

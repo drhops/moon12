@@ -6,7 +6,7 @@
 <div id="page">
 <div class="exhibit home-section">
 	<a href="/exhibits">
-	<div><h3>Current Exhibition</h3></div>
+	<div class="section-title">Current Exhibition</div>
   </a>
 	<br>
   <div class="exhibit-info pull-left">
@@ -26,7 +26,7 @@
 </div>
 <div class="artists home-section">
 	<a href="/artists">
-	<h3>Artists</h3>
+	<div class="section-title">Artists</div>
 	</a>
 	<br>
 	{% set _firstArtist = true %}
@@ -45,7 +45,7 @@
 </div>
 <div class="events home-section">
 	<a href="/events">
-	<div><h3>Events</h3></div>
+	<div class="section-title">Events</div>
 	</a>
 	<br>	
   {% for sEventId, dEvent in dEvents.iteritems() %}
@@ -60,7 +60,7 @@
 </div>
 <div class="gallery home-section">
 	<a href="/about">
-	<div><h3>Gallery</h3></div>
+	<div class="section-title">Gallery</div>
 	</a>
 	<br>
 	<div class="gallery-description pull-left">
