@@ -173,3 +173,5 @@ JINJA2_EXTENSIONS = (
 
 JINJA2_FILTERS = (
 )
+
+SERIALIZATION_MODULES = {'json-pretty': 'moon12.serializers.pretty_json'}
