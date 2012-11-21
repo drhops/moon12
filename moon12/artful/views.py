@@ -1,15 +1,24 @@
-from artful.models import Artist, D_ARTISTS, D_EVENTS, D_EXHIBIT
+from artful.models import Artist, D_EVENTS, D_EXHIBIT, Image
 from moon12.urls import render_to_response
+
+def getArtistsData():
+  lmArtists = Artist.objects.all()  
+
+  dArtists = {}
+  for mArtist in lmArtists:
+    mArtist.images = Image.objects.filter(artist=mArtist)
+    dArtists[mArtist.username] = mArtist
+    
+  return dArtists
 
 
 def root(request):
-  lsArtists = list((k, v) for k, v in D_ARTISTS.iteritems())
-  lsArtists.sort(key=lambda (k,v): v['display_order'])
-  lsArtists = [k for (k, v) in lsArtists]
+  dArtists = getArtistsData()
+  lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
   
   dData = {
     'dCurrentExhibit': D_EXHIBIT,
-    'dArtists': D_ARTISTS,
+    'dArtists': dArtists,
     'lsArtists': lsArtists,
     'dEvents': D_EVENTS, 
   }
@@ -33,56 +42,42 @@ def exhibits(request):
   sCurrentArtistId = D_EXHIBIT['artist']
   dData = {
     'dCurrentExhibit': D_EXHIBIT,
-    'dCurrentArtist': D_ARTISTS[sCurrentArtistId],
+    'dCurrentArtist': Artist.objects.get(username=sCurrentArtistId),
     'sCurrentArtistId': sCurrentArtistId,
   }
   return render_to_response('exhibits.html', dData)
 
 def artists(request):
-  lsArtists = list((k, v) for k, v in D_ARTISTS.iteritems())
-  lsArtists.sort(key=lambda (k,v): v['display_order'])
-  lsArtists = [k for (k, v) in lsArtists]
+  dArtists = getArtistsData()
+  lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
   
   dData = {
-    'dArtists': D_ARTISTS,
+    'dArtists': dArtists,
     'lsArtists': lsArtists,
   }
   return render_to_response('artists.html', dData)
 
+def getArtistData(sArtistId):
+  mArtist = Artist.objects.get(username=sArtistId)
+  lmImages = Image.objects.filter(artist=mArtist)
+  
+  for mImage in lmImages:
+    sSource = mImage.source
+    mImage.source_image = '/static/images/artists/%s/album/%s' % (sArtistId, sSource)
+    mImage.source_thumb = '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource)
+    mImage.source_slide = '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource)
+    
+  mArtist.images = lmImages
+  return mArtist
+
 def artist_bio(request, sArtistId):
-  dArtist = D_ARTISTS.get(sArtistId, {})
-  
-  for dImage in dArtist.get('images', []):
-    sSource = dImage.get('source')
-    dImage.update({
-      'source_image': '/static/images/artists/%s/album/%s' % (sArtistId, sSource),
-      'source_thumb': '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource),
-      'source_slide': '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource),
-    })
-  
-  if not dArtist:
-    pass
-    # return 404    
   dData = {
-    'dArtist': dArtist,
+    'dArtist': getArtistData(sArtistId),
   }
   return render_to_response('artist/bio.html', dData)
 
 def artist_gallery(request, sArtistId):
-  dArtist = D_ARTISTS.get(sArtistId, {})
-  
-  for dImage in dArtist.get('images', []):
-    sSource = dImage.get('source')
-    dImage.update({
-      'source_image': '/static/images/artists/%s/album/%s' % (sArtistId, sSource),
-      'source_thumb': '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource),
-      'source_slide': '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource),
-    })
-  
-  if not dArtist:
-    pass
-    # return 404    
   dData = {
-    'dArtist': dArtist,
+    'dArtist': getArtistData(sArtistId),
   }
   return render_to_response('artist/gallery.html', dData)

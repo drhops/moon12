@@ -1,7 +1,11 @@
 from coffin import shortcuts
 from coffin.conf.urls.defaults import patterns, url
+from django.conf.urls.defaults import include
+from django.contrib import admin
 from django.http import HttpResponse
 import jinja2
+
+admin.autodiscover()
 
 @jinja2.contextfunction
 def get_context(c):
@@ -19,6 +23,8 @@ def render_to_response(template_file, context={}, request=None, mimetype="text/h
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/', include(admin.site.urls)), 
     url(r'^$', 'artful.views.root', name='root'),
     url(r'^opening$', 'artful.views.opening', name='opening'),
     url(r'^about', 'artful.views.about', name='about'),
@@ -31,10 +37,4 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'moon12.views.home', name='home'),
     # url(r'^moon12/', include('moon12.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
 )
