@@ -1,0 +1,287 @@
+@charset "UTF-8";
+html,
+body{min-width:960px;}
+html{
+  /* background:#191919 url(../../images/splash/bg-page.gif) 50% 0; */
+  height:100%
+}
+body {
+  /* background:url(../images/canvas.jpg) no-repeat 50% 0; */
+}
+
+/* HEADER */
+.header {
+	width: 960px;
+	height: 160px;	
+	margin: 0 auto;
+	border-color: #bbb;
+	border-style: none none solid none;
+	border-width: 0px 0px 2px 0px;	
+}
+
+.left-nav {
+}
+
+.right-nav {
+	position: relative;
+	height:100%;
+	width:400px;
+}
+
+.right-nav-content {
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+
+.link-nav {
+	height: 100%;
+	float: left;
+	margin: 8px;
+	text-align: bottom;
+}
+
+/* FOOTER */
+.footer {
+  width: 960px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+
+.copyright {
+}
+
+/* HOME */
+.home {
+  width: 960px;
+	margin: 0 auto;
+}
+
+.home .section-title {
+	font-size:1.2em;
+	text-align: center;
+	color: #5F574F;
+}
+
+.home a {
+	color: #5F574F;
+	text-decoration: none;
+}
+
+.home a:focus, a:hover, a:active {
+	color: #5F574F;
+	text-decoration: underline;
+}
+
+.home-section {
+  width:100%;
+	border-color: #eee;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;	
+	margin-top: 30px;
+	
+}
+
+.home .exhibit-info {
+	width:50%
+}
+
+.home .exhibit-image {
+	width: 300px;
+	height: 300px;
+}
+
+.home .artist-section {
+	width:180px;
+	float:left;
+	margin-left:5px;
+	padding-bottom:10px;
+}
+
+.home .artist-name {
+	width:80px;
+	text-align:center;
+	display:table;
+	height:70px;
+}
+
+.home .artist-name .cell {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.home .artist-image {
+  width: 70px;
+  height: 70px;
+}
+
+.home .event-section {
+}
+
+.home .event-blurb {
+	margin-right:10px;
+	margin-left:10px;
+	width: 240px;
+}
+
+.home .event-image {
+	width: 220px;	
+}
+
+.home .gallery-image {
+	height: 300px;
+}
+
+/* EXHIBITS */
+.exhibit-current {
+	text-align: center;
+	margin: 15px 0px auto;	
+}
+
+.exhibit-image {
+	height: 500px;
+}
+
+.exhibit-invite {
+	border:1px solid #bbb;
+}
+
+/* ARTISTS */
+.artists {
+	margin-top: 30px;
+}
+
+.page-title {
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;
+	width: 100%;
+}
+
+.artist {
+	margin-bottom: 40px;
+}
+
+.artist-container {
+	
+}
+
+.artist .artist-name {
+	color: #5F574F;
+	font-size:1.2em;
+	height:30px;
+}
+
+.artist-left {
+	text-align: center;
+}
+
+.artist .artist-image {
+	width:250px;
+	height:250px;
+}
+
+.artist-right {
+	margin-left:30px;
+	width: 200px;
+}
+
+.artist .gallery-link {
+	margin-top:5px;
+	font-size:0.8em;
+}
+.artist .bio-link {
+	margin-top:5px;
+	font-size:0.8em;
+}
+
+/* EVENTS */
+.events {
+	margin-top: 30px;
+}
+
+.event-image {
+	max-width: 400px;
+}
+
+.event-blurb {
+	width:500px;
+	margin-left:25px;
+}
+
+/* ABOUT */
+.about {
+	text-align: center;
+	margin: 15px 0px auto;	
+}
+
+.about-left {
+	width:50%;
+}
+
+.about-right {
+	width:50%;
+}
+
+.about .gallery-image {
+	width:480px;
+}
+
+.about .facebook-icon {
+	vertical-align:top;
+	width:17px;
+	height:17px;
+}
+
+.about-contact {
+	margin-top: 30px;
+}
+
+.about-contact div {
+	margin-top:7px;
+}
+
+.about-map {
+	margin-top: 30px;
+}
+
+/* COMMON */
+
+.moon-red {
+	color: #EF4135;	
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.verticalDivider {
+   border-right:1px solid #ddd; 
+   height:60px;
+   width:1px;
+} 
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
