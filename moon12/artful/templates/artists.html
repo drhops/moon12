@@ -4,7 +4,7 @@
 <div class="artists">
 <div id="page">
 
-<div class="page-title">Artists</div><br>
+<div class="page-title">Artists</div>
 
 <div class="artists-container">
   {% for sArtistId in lsArtists %}
@@ -13,9 +13,9 @@
       'dArtist': dArtists.get(sArtistId),
       'sArtistId': sArtistId,
     }) %}
-	  {% include 'artist_frag.html' %}
+    {% include 'artist_frag.html' %}
   {% endfor %}
-<div class="clearfix"></div>  	
+<div class="clearfix"></div>
 </div>
 
 </div>

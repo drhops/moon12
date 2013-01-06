@@ -24,13 +24,14 @@ def render_to_response(template_file, context={}, request=None, mimetype="text/h
 
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)), 
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'artful.views.root', name='root'),
     url(r'^opening$', 'artful.views.opening', name='opening'),
-    url(r'^about', 'artful.views.about', name='about'),
+    url(r'^gallery', 'artful.views.about', name='about'),
     url(r'^events', 'artful.views.events', name='events'),
     url(r'^exhibits$', 'artful.views.exhibits', name='exhibits'),
     url(r'^artists$', 'artful.views.artists', name='artists'),
+    url(r'^artist/([\w-]+)/statement$', 'artful.views.artist_statement', name='artist_statement'),
     url(r'^artist/([\w-]+)/bio$', 'artful.views.artist_bio', name='artist_bio'),
     url(r'^artist/([\w-]+)/gallery$', 'artful.views.artist_gallery', name='artist_gallery'),
 

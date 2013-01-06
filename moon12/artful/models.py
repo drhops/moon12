@@ -32,7 +32,7 @@ D_EXHIBIT = {
   'subtitle': u'藝術家洪天宇個展',
   'dates': '11/10 - 12/10',
   'description': u'藝術家洪天宇個展：金權盛世-熱帶雨林篇，將於11.10（六）下午三點開幕，藝術家現場親自導覧，展期一個月。',
-  'image': '/static/images/exhibits/mcdonalds.jpg',
+  'image': u'/static/images/exhibits/洪天宇_滴血的歡樂.jpg',
   'artist': 'hong-tian-yu',
 }
 
@@ -41,14 +41,15 @@ class Artist(models.Model):
   """Model to represent an artist."""
   username = models.CharField(max_length=25, db_index=True, unique=True, blank=True, null=True)
   full_name = models.CharField(max_length=255)
-  description = models.TextField()
-  display_order = models.IntegerField()
+  description = models.TextField(blank=True, null=True)
+  statement = models.TextField(blank=True, null=True)
+  display_order = models.IntegerField(blank=True, null=True)
   home_image = models.CharField(max_length=255)
   last_modified = models.DateTimeField(null=True, editable=False)
 
   def __unicode__(self):
     return self.full_name
-  
+
   def get_first_name(self):
     return self.full_name.split(" ")[0]
 
@@ -56,15 +57,15 @@ class Artist(models.Model):
 class Image(models.Model):
   def __unicode__(self):
     return '%s | %s' % (self.artist.full_name, self.title)
-  
+
   artist = models.ForeignKey('Artist')
-  description = models.TextField()
-  title = models.CharField(max_length=255)
-  medium = models.CharField(max_length=255)
-  year = models.CharField(max_length=255)
-  dimensions = models.CharField(max_length=255)
-  source = models.CharField(max_length=255)
-  
+  description = models.TextField(blank=True, null=True)
+  title = models.CharField(max_length=255, blank=True, null=True)
+  medium = models.CharField(max_length=255, blank=True, null=True)
+  year = models.CharField(max_length=255, blank=True, null=True)
+  dimensions = models.CharField(max_length=255, blank=True, null=True)
+  source = models.CharField(max_length=255, blank=True, null=True)
+
 
 admin.site.register(Artist)
-admin.site.register(Image) 
+admin.site.register(Image)

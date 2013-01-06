@@ -1,15 +1,18 @@
 {% set c = context() %}
 
 <div class="event-section pull-left">
+  <a href="/events">
   <div class="pull-left">
-	<a href="/events">
   	<img class="event-image" src="{{ c.dEvent.image }}"/>
 	  <div class="clearfix"></div>  
-	</a>
+  </a>
   </div>
   <div class="event-blurb pull-right">
-  	{{ c.dEvent.description }}
-	  <div class="clearfix"></div>  
+	{{ c.dEvent.dates }}<br><br>
+  	<a href="/events">{{ c.dEvent.title }}</a><br><br>
+  	<!-- TODO: only show photos if they exist -->
+  	<a href="/event/x">view photos</a>
+	<div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>  
 </div>

@@ -1,0 +1,4 @@
+
+
+Make sure moon12 database is UTF8 (easiest to set this while the database is empty, using the below command)
+ALTER DATABASE moon12 charset=utf8;

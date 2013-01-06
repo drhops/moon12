@@ -5,85 +5,93 @@
 <div class="home">
 <div id="page">
 <div class="exhibit home-section">
-	<a href="/exhibits">
-	<div class="section-title">Current Exhibition</div>
+  <a href="/exhibits">
+  <div class="section-title">Current Exhibition</div>
   </a>
-	<br>
+  <br>
   <div class="exhibit-info pull-left">
-  	<h2 style="font-weight:normal;">{{ dCurrentExhibit.title }}</h2><br>
-  	<div>{{ dCurrentExhibit.subtitle }}</div><br>
-  	<div>{{ dCurrentExhibit.dates }}</div><br>
-  	<div>{{ dCurrentExhibit.description }}</div>
-	  <div class="clearfix"></div>
+    <a href="/artist/{{ dCurrentExhibit.artist }}/gallery">{{ dCurrentExhibitArtist.full_name }}</a><br>
+    <h2 style="font-weight:normal;">{{ dCurrentExhibit.title }}</h2><br>
+    <div>{{ dCurrentExhibit.subtitle }}</div><br>
+    <div>{{ dCurrentExhibit.dates }}</div><br>
+    <div>{{ dCurrentExhibit.description }}</div>
+    <div class="clearfix"></div>
   </div>
-	<a href="/exhibits">
+  <a href="/exhibits">
   <div class="pull-right">
-  	<img class="exhibit-image" src="{{ dCurrentExhibit.image }}"/>
- 	  <div class="clearfix"></div>
+    <img class="exhibit-image" src="{{ dCurrentExhibit.image }}"/>
+     <div class="clearfix"></div>
   </div>
   </a>
-  <div class="clearfix"></div>  
+  <div class="clearfix"></div>
 </div>
 <div class="artists home-section">
-	<a href="/artists">
-	<div class="section-title">Artists</div>
-	</a>
-	<br>
-	{% set _firstArtist = true %}
+  <a href="/artists">
+  <div class="section-title">Artists</div>
+  </a>
+  <br>
+  {% set _firstArtist = true %}
   {% for sArtistId in lsArtists %}
     {% set _context = c %}
     {% do _context.update({
       'dArtist': dArtists.get(sArtistId),
       'sArtistId': sArtistId,
     }) %}
-	  {% if not _firstArtist %}
-		{% endif %}
-		{% set _firstArtist = false %}
-	  {% include 'home_artist_frag.html' %}	  	
+    {% if not _firstArtist %}
+    {% endif %}
+    {% set _firstArtist = false %}
+    {% include 'home_artist_frag.html' %}
   {% endfor %}
-  <div class="clearfix"></div>  
+  <div class="clearfix"></div>
 </div>
 <div class="events home-section">
-	<a href="/events">
-	<div class="section-title">Events</div>
-	</a>
-	<br>	
+  <a href="/events">
+  <div class="section-title">Events</div>
+  </a>
+  <br>
   {% for sEventId, dEvent in dEvents.iteritems() %}
     {% set _context = c %}
     {% do _context.update({
       'dEvent': dEvent,
       'sEventId': sEventId,
     }) %}
-	  {% include 'home_event_frag.html' %}
+    {% include 'home_event_frag.html' %}
   {% endfor %}
-  <div class="clearfix"></div>  	
+  <div class="clearfix"></div>
 </div>
 <div class="gallery home-section">
-	<a href="/about">
-	<div class="section-title">Gallery</div>
-	</a>
-	<br>
-	<div class="gallery-description pull-left">
-夢12 - 築夢的話<br>
-<br>
-小時候，夢想趕快長大；<br>
-長大後，有些夢想遠去、有些夢想消失、還有些夢想剛剛開始…<br>
-<br>
-如果，一輩子有十萬個夢，這是第幾個?<br>
-<br>
-在這裡<br>，
-觀看過去，凝視現在，眺望未來！<br>
-<br>
-夢12<br>，
-與您一起築夢、織夢、圓夢！<br>
-	</div>
-	<div class="pull-right">
-	<a href="/about">
-		<img class="gallery-image" src="/static/images/gallery.jpg"/>
- 	  <div class="clearfix"></div>
-	</a>
-	</div>
- 	<div class="clearfix"></div>
+  <a href="/gallery">
+  <div class="section-title">Gallery</div>
+  </a>
+  <br>
+  <div class="gallery-description pull-left">
+  <div class="">
+    Contact:<br><br>
+    <div>886-2-2377-1236</div>
+    <div><a href="mailto:info@moon12art.com">info@moon12art.com</a></div>
+    <div>
+      <img class="facebook-icon" src="/static/images/facebook-icon.png"/>
+      <span><a href="http://www.facebook.com/moon12art">facebook</a></span>
+    </div>
+  </div>
+
+  <div class="home-about-map">
+    <div class="gallery-open">
+    Visit:<br><br>
+    Open 11:00-19:00，Sun-Sat (Everyday)
+    <br>
+    台北市大安區安和路二段209巷12號1樓
+    <br><br><br>
+    </div>
+  </div>
+  </div>
+  <div class="pull-right">
+  <a href="/about">
+    <img class="gallery-image" src="/static/images/gallery.jpg"/>
+     <div class="clearfix"></div>
+  </a>
+  </div>
+   <div class="clearfix"></div>
 </div>
 </div>
 </div>

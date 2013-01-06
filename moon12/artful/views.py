@@ -2,25 +2,26 @@ from artful.models import Artist, D_EVENTS, D_EXHIBIT, Image
 from moon12.urls import render_to_response
 
 def getArtistsData():
-  lmArtists = Artist.objects.all()  
+  lmArtists = Artist.objects.all()
 
   dArtists = {}
   for mArtist in lmArtists:
     mArtist.images = Image.objects.filter(artist=mArtist)
     dArtists[mArtist.username] = mArtist
-    
+
   return dArtists
 
 
 def root(request):
   dArtists = getArtistsData()
   lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
-  
+
   dData = {
     'dCurrentExhibit': D_EXHIBIT,
+    'dCurrentExhibitArtist': dArtists[D_EXHIBIT['artist']],
     'dArtists': dArtists,
     'lsArtists': lsArtists,
-    'dEvents': D_EVENTS, 
+    'dEvents': D_EVENTS,
   }
   return render_to_response('home.html', dData)
 
@@ -50,7 +51,7 @@ def exhibits(request):
 def artists(request):
   dArtists = getArtistsData()
   lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
-  
+
   dData = {
     'dArtists': dArtists,
     'lsArtists': lsArtists,
@@ -60,15 +61,21 @@ def artists(request):
 def getArtistData(sArtistId):
   mArtist = Artist.objects.get(username=sArtistId)
   lmImages = Image.objects.filter(artist=mArtist)
-  
+
   for mImage in lmImages:
     sSource = mImage.source
     mImage.source_image = '/static/images/artists/%s/album/%s' % (sArtistId, sSource)
     mImage.source_thumb = '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource)
     mImage.source_slide = '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource)
-    
+
   mArtist.images = lmImages
   return mArtist
+
+def artist_statement(request, sArtistId):
+  dData = {
+    'dArtist': getArtistData(sArtistId),
+  }
+  return render_to_response('artist/statement.html', dData)
 
 def artist_bio(request, sArtistId):
   dData = {
