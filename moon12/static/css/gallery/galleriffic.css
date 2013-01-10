@@ -12,17 +12,23 @@ div.content a:hover, div.content a:active {
 	text-decoration: underline;
 }
 div.controls {
-	margin-top: 5px;
+	position:absolute;
+	bottom: 0px;
 	height: 23px;
+	width: 554px;
 }
 div.controls a {
 	padding: 5px;
 }
 div.ss-controls {
-	float: left;
+	position:absolute;
+	bottom: -20px;
+	left: 0px;
 }
 div.nav-controls {
-	float: right;
+	position:absolute;
+	bottom: -20px;
+	right: 0px;
 }
 div.slideshow-container {
 	position: relative;
@@ -60,7 +66,7 @@ div.slideshow img {
 }
 div.caption-container {
 	position: relative;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 span.image-caption {
 	display: block;
