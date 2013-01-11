@@ -33,7 +33,9 @@ urlpatterns = patterns('',
     url(r'^artists$', 'artful.views.artists', name='artists'),
     url(r'^artist/([\w-]+)/statement$', 'artful.views.artist_statement', name='artist_statement'),
     url(r'^artist/([\w-]+)/bio$', 'artful.views.artist_bio', name='artist_bio'),
+    url(r'^artist/([\w-]+)/essays$', 'artful.views.artist_essays', name='artist_essays'),
     url(r'^artist/([\w-]+)/gallery$', 'artful.views.artist_gallery', name='artist_gallery'),
+    url(r'^event/([\w-]+)/photos$', 'artful.views.event_photos', name='event_photos'),
 
     # Examples:
     # url(r'^$', 'moon12.views.home', name='home'),

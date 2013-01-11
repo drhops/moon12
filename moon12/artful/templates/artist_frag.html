@@ -16,14 +16,14 @@
     <div class="bio-link">
       <a href="/artist/{{ c.sArtistId }}/bio">簡歷 artist bio</a>
     </div>
+    {% if c.dArtist.essays %}
+    <div class="essays-link">
+      <a href="/artist/{{ c.sArtistId }}/essays">評論 view essays</a>
+    </div>
+    {% endif %}
     <div class="gallery-link">
       <a href="/artist/{{ c.sArtistId }}/gallery">作品 view artwork</a>
     </div>
-    <!-- NOT IMPLEMENTED
-    <div class="essay-link">
-      <a href="/artist/{{ c.sArtistId }}/gallery">評論 view essay</a>
-    </div>
-    -->
     <div class="clearfix"></div>
   </div>
 

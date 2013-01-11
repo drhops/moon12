@@ -71,6 +71,10 @@ def getArtistData(sArtistId):
   mArtist.images = lmImages
   return mArtist
 
+def event_photos(request, sEventId):
+  dData = {}
+  return render_to_response('event/photos.html', dData)
+
 def artist_statement(request, sArtistId):
   dData = {
     'dArtist': getArtistData(sArtistId),
@@ -82,6 +86,12 @@ def artist_bio(request, sArtistId):
     'dArtist': getArtistData(sArtistId),
   }
   return render_to_response('artist/bio.html', dData)
+
+def artist_essays(request, sArtistId):
+  dData = {
+    'dArtist': getArtistData(sArtistId),
+  }
+  return render_to_response('artist/essays.html', dData)
 
 def artist_gallery(request, sArtistId):
   dData = {

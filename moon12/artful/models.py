@@ -43,6 +43,7 @@ class Artist(models.Model):
   full_name = models.CharField(max_length=255)
   description = models.TextField(blank=True, null=True)
   statement = models.TextField(blank=True, null=True)
+  essays = models.TextField(blank=True, null=True)
   display_order = models.IntegerField(blank=True, null=True)
   home_image = models.CharField(max_length=255)
   last_modified = models.DateTimeField(null=True, editable=False)

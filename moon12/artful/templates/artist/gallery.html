@@ -50,7 +50,7 @@
 
       <div style="position:relative;" class="backlink">
       <div style="position:absolute;top:0;left:0;">
-        <a href="/artists"><--all artists</a>
+		<a href="/artists"><img src="/static/images/moon12arrow-long.png" style="vertical-align:bottom;">&nbsp;all artists</a>
       </div>
       </div>
 
@@ -120,7 +120,7 @@
           captionContainerSel:    '#caption',
           loadingContainerSel:    '#loading',
           renderSSControls:       true,
-          playLinkText:           'Play',
+          playLinkText:           'Play Slideshow',
           pauseLinkText:          'Pause',
           prevLinkText:           'Previous',
           nextLinkText:           'Next',
@@ -135,7 +135,7 @@
               .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
               .eq(nextIndex).fadeTo('fast', 1.0);
 
-            this.$captionContainer.find('div.photo-index').html('Photo '+ (nextIndex+1) +' of '+ this.data.length);
+            this.$captionContainer.find('div.photo-index').html('Image '+ (nextIndex+1) +' of '+ this.data.length);
           },
           onPageTransitionOut:       function(callback) {
             this.fadeTo('fast', 0.0, callback);

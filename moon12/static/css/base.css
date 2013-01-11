@@ -1,9 +1,11 @@
 @charset "UTF-8";
 html,
-body{min-width:960px;}
+body{
+  min-width:960px;
+  height:100%;
+}
 html{
   /* background:#191919 url(../../images/splash/bg-page.gif) 50% 0; */
-  height:100%
 }
 body {
   /* background:url(../images/canvas.jpg) no-repeat 50% 0; */
@@ -12,7 +14,7 @@ body {
 /* HEADER */
 .header {
   width: 960px;
-  height: 112px;
+  height: 116px;
   margin-left:auto;
   margin-right:auto;
   margin-top:20px;
@@ -82,7 +84,6 @@ body {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   margin-top: 30px;
-
 }
 
 .home .exhibit-info {
@@ -95,14 +96,19 @@ body {
 }
 
 .home .artist-section {
+  /* 6 per-row
   width:155px;
+  padding-left:5px; */
+
+  width:215px;
   float:left;
-  margin-left:5px;
-  padding-bottom:10px;
+  padding-left:25px;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 .home .artist-name {
-  width:80px;
+  width:110px;
   text-align:center;
   display:table;
   height:70px;
@@ -135,6 +141,10 @@ body {
   height: 300px;
 }
 
+.home .gallery-map {
+  height: 300px;
+}
+
 /* EXHIBITS */
 .exhibit-current {
   text-align: center;
@@ -151,11 +161,11 @@ body {
 
 /* ARTISTS */
 .artists {
-  margin-top: 40px;
+  margin-top:40px;
 }
 
 .artists .page-title {
-  margin-bottom: 40px;
+  margin-bottom:40px;
 }
 
 .backlink {
@@ -209,6 +219,10 @@ body {
   margin-top:5px;
   font-size:0.8em;
 }
+.artist .essays-link {
+  margin-top:5px;
+  font-size:0.8em;
+}
 
 .artist-gallery {
   margin-top: 30px;
@@ -239,7 +253,7 @@ body {
 }
 
 .gallery-description {
-  margin-left:30px;
+  /*margin-left:30px;*/
 }
 
 .gallery-map {
@@ -319,4 +333,34 @@ html[xmlns] .clearfix {
 
 * html .clearfix {
   height: 1%;
+}
+
+
+/* masonry */
+.col3 { width: 280px; }
+
+/**** Clearfix ****/
+.clearfixx:before, .clearfixx:after { content: ""; display: table; }
+.clearfixx:after { clear: both; }
+.clearfixx { zoom: 1; }
+
+.box {
+  margin: 5px;
+  padding: 5px;
+  background: #FDFAF8;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  border-radius: 5px;
+}
+
+.box h2 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.box img,
+#tumblelog img {
+  display: block;
+  width: 100%;
 }

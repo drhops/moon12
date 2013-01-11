@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="artist-bio">
+<div id="page">
+
+<div style="position:relative;" class="artist-bio">
+<div style="position:absolute;top:0;left:0;">
+<a href="/artists"><img src="/static/images/moon12arrow-long.png" style="vertical-align:bottom;">&nbsp;all artists</a>
+</div>
+</div>
+
+<div style="width:75%; margin:0 auto;">
+  <div class="page-title">{{ dArtist.full_name }}</div><br>
+  <div>{{ dArtist.essays|safe }}</div>
+</div>
+
+</div>
+</div>
+{% endblock %}

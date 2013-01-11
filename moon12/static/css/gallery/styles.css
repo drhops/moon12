@@ -11,7 +11,7 @@ body{
 }
 
 a{
-  color: #021896;
+  color: #5B80B2; /* old: 021896; */
   text-decoration: none;
 }
 a:focus, a:hover, a:active {
