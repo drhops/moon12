@@ -1,5 +1,6 @@
 @charset "UTF-8";
 html,
+
 body{
   min-width:960px;
   height:100%;
@@ -220,6 +221,10 @@ body {
   font-size:0.8em;
 }
 .artist .essays-link {
+  margin-top:5px;
+  font-size:0.8em;
+}
+.artist .videos-link {
   margin-top:5px;
   font-size:0.8em;
 }

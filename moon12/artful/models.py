@@ -27,6 +27,7 @@ D_EVENTS = {
   },
 }
 
+
 D_EXHIBIT = {
   'title': u'金權盛世-熱帶雨林篇',
   'subtitle': u'藝術家洪天宇個展',
@@ -44,6 +45,7 @@ class Artist(models.Model):
   description = models.TextField(blank=True, null=True)
   statement = models.TextField(blank=True, null=True)
   essays = models.TextField(blank=True, null=True)
+  videos = models.TextField(blank=True, null=True)
   display_order = models.IntegerField(blank=True, null=True)
   home_image = models.CharField(max_length=255)
   last_modified = models.DateTimeField(null=True, editable=False)
