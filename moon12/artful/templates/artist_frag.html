@@ -11,18 +11,23 @@
   <div class="artist-right pull-left">
     <div class="artist-name">{{ c.dArtist.full_name }}</div>
     <div class="statement-link">
-      <a href="/artist/{{ c.sArtistId }}/statement">自述 artist statement</a>
+      <a href="/artist/{{ c.sArtistId }}/statement">自述 Artist Statement</a>
     </div>
     <div class="bio-link">
-      <a href="/artist/{{ c.sArtistId }}/bio">簡歷 artist bio</a>
+      <a href="/artist/{{ c.sArtistId }}/chronology">年表 Chronology</a>
     </div>
     {% if c.dArtist.essays %}
     <div class="essays-link">
-      <a href="/artist/{{ c.sArtistId }}/essays">評論 view essays</a>
+      <a href="/artist/{{ c.sArtistId }}/essays">評論 Essays</a>
+    </div>
+    {% endif %}
+    {% if c.dArtist.videos %}
+    <div class="videos-link">
+      <a href="/artist/{{ c.sArtistId }}/videos">影片 Videos</a>
     </div>
     {% endif %}
     <div class="gallery-link">
-      <a href="/artist/{{ c.sArtistId }}/gallery">作品 view artwork</a>
+      <a href="/artist/{{ c.sArtistId }}/gallery">作品 Artwork</a>
     </div>
     <div class="clearfix"></div>
   </div>

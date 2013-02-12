@@ -93,6 +93,12 @@ def artist_essays(request, sArtistId):
   }
   return render_to_response('artist/essays.html', dData)
 
+def artist_videos(request, sArtistId):
+  dData = {
+    'dArtist': getArtistData(sArtistId),
+  }
+  return render_to_response('artist/videos.html', dData)
+
 def artist_gallery(request, sArtistId):
   dData = {
     'dArtist': getArtistData(sArtistId),
