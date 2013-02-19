@@ -12,6 +12,11 @@ body {
   /* background:url(../images/canvas.jpg) no-repeat 50% 0; */
 }
 
+a img {
+    border:none;
+	outline:none;
+}
+
 /* HEADER */
 .header {
   width: 960px;
