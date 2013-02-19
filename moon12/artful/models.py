@@ -84,6 +84,9 @@ D_EVENTS = {
     'dates': '10/27',
     'image': '/static/images/events/opening.jpg',
     'future': False,
+    'images': [
+'/static/images/events/opening.jpg',
+    ],
   },
 }
 
