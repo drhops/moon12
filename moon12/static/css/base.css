@@ -17,6 +17,18 @@ a img {
 	outline:none;
 }
 
+.rounded {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.dropshadow {
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 1px 1px 5px #000;
+}
+
 /* HEADER */
 .header {
   width: 960px;
