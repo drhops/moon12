@@ -78,7 +78,18 @@ def getArtistData(sArtistId):
   return mArtist
 
 def event_photos(request, sEventId):
-  dData = {}
+  dEvent = D_EVENTS.get(sEventId)
+  dEvent['ldImages'] = []
+  for image in dEvent.get('images'):
+  	dEvent['ldImages'].append({
+  	  'image': image.replace('/album/slides', ''),
+  	  'slide': image,
+  	})
+
+  dData = {
+    'dEvent': dEvent,
+    'sEventId': sEventId,
+  }
   return render_to_response('event/photos.html', dData)
 
 def artist_statement(request, sArtistId):

@@ -4,15 +4,15 @@
   <a href="/events">
   <div class="pull-left">
   	<img class="event-image" src="{{ c.dEvent.image }}"/>
-	  <div class="clearfix"></div>  
+	  <div class="clearfix"></div>
   </a>
   </div>
   <div class="event-blurb pull-right">
 	{{ c.dEvent.dates }}<br><br>
   	<a href="/events">{{ c.dEvent.title }}</a><br><br>
   	<!-- TODO: only show photos if they exist -->
-  	<a href="/event/x">view photos</a>
+  	<a href="/event/{{ c.sEventId }}/photos">view photos</a>
 	<div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>  
+  <div class="clearfix"></div>
 </div>

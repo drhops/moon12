@@ -3,37 +3,38 @@
 {% block content %}
 <div class="events">
 <div id="page">
+	<!--
 	<div class="pull-left">
 	<h2 style="font-weight:normal;">Upcoming Events</h2>
-	<br>	
+	<br>
   {% for sEventId, dEvent in dFutureEvents.iteritems() %}
     {% set _context = c %}
     {% do _context.update({
       'dEvent': dEvent,
-      'sEventId': sEventId, 
+      'sEventId': sEventId,
     }) %}
 	  {% include 'event_frag.html' %}
   {% endfor %}
-  <div class="clearfix"></div>  	
+  <div class="clearfix"></div>
 	</div>
-	
+
+	-->
 	<div class="pull-left">
-	<br><br>
-	
-	<h2 style="font-weight:normal;">Past Events</h2>
-	<br>	
+
+	<h2 style="font-weight:normal;">Events</h2>
+	<br>
   {% for sEventId, dEvent in dPastEvents.iteritems() %}
     {% set _context = c %}
     {% do _context.update({
       'dEvent': dEvent,
-      'sEventId': sEventId, 
+      'sEventId': sEventId,
     }) %}
 	  {% include 'event_frag.html' %}
   {% endfor %}
-  <div class="clearfix"></div>  	
+  <div class="clearfix"></div>
 	</div>
-	
-  <div class="clearfix"></div>  	
+
+  <div class="clearfix"></div>
 </div>
 </div>
 {% endblock %}
