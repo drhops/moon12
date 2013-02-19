@@ -7,10 +7,16 @@ def getArtistsData():
   dArtists = {}
   for mArtist in lmArtists:
     mArtist.images = Image.objects.filter(artist=mArtist)
+    mArtist.home_image_70 = appendBeforeFileExtension(mArtist.home_image, 70)
+    mArtist.home_image_250 = appendBeforeFileExtension(mArtist.home_image, 250)
     dArtists[mArtist.username] = mArtist
 
   return dArtists
 
+def appendBeforeFileExtension(filename, appendage):
+	lsPieces = filename.rsplit('.', 2)
+	lsPieces[0] = "%s%s" % (lsPieces[0], appendage)
+	return '.'.join(lsPieces)
 
 def root(request):
   dArtists = getArtistsData()
