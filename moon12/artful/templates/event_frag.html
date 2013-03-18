@@ -2,7 +2,7 @@
 
 <div class="event-section pull-left">
   <div class="pull-left" style="width:400px;">
-	<a href="/events">
+	<a href="/event/{{ c.sEventId }}/photos">
   	<img class="event-image rounded dropshadow" src="{{ c.dEvent.image }}"/>
 	  <div class="clearfix"></div>
 	</a>
@@ -16,6 +16,7 @@
 	  {% endif %}
   	<h2 style="font-weight:normal;">{{ c.dEvent.title }}</h2><br>
 	  <div>{{ c.dEvent.description }}</div>
+	  <br><div><a href="/event/{{ c.sEventId }}/photos">view photos</a></div>
 	  <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>

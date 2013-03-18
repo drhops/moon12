@@ -1,5 +1,6 @@
 from artful.models import Artist, D_EVENTS, D_EXHIBIT, Image
 from moon12.urls import render_to_response
+from collections import OrderedDict
 
 def getArtistsData():
   lmArtists = Artist.objects.all()
@@ -27,7 +28,7 @@ def root(request):
     'dCurrentExhibitArtist': dArtists[D_EXHIBIT['artist']],
     'dArtists': dArtists,
     'lsArtists': lsArtists,
-    'dEvents': D_EVENTS,
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['dates'], reverse=True)),
   }
   return render_to_response('home.html', dData)
 
@@ -38,10 +39,12 @@ def about(request):
   return render_to_response('about.html', {})
 
 def events(request):
+  dFutureEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') == True)
+  dPastEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') != True)
   dData = {
-    'dEvents': D_EVENTS,
-    'dFutureEvents': dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') == True),
-    'dPastEvents': dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') != True),
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['dates'], reverse=True)),
+    'dFutureEvents': OrderedDict(sorted(dFutureEvents.items(), key= lambda x: x[1]['dates'], reverse=True)),
+    'dPastEvents': OrderedDict(sorted(dPastEvents.items(), key= lambda x: x[1]['dates'], reverse=True)),
   }
   return render_to_response('events.html', dData)
 

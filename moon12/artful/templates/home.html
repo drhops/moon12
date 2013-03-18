@@ -58,7 +58,7 @@
   <div class="section-title">Events</div>
   </a>
   <br>
-  {% for sEventId, dEvent in dEvents.iteritems() %}
+  {% for sEventId, dEvent in dEvents.iteritems() if dEvent.show == True %}
     {% set _context = c %}
     {% do _context.update({
       'dEvent': dEvent,
