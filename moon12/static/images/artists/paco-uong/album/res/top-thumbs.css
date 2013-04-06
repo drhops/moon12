@@ -7,7 +7,6 @@ div.navigation {
 	float: left;
 	position: relative;
 	left: -50%;
-	margin-bottom:20px;
 }
 div.pagination {
 	clear: both;
