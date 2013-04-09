@@ -122,7 +122,7 @@ D_EVENTS = {
 '/static/images/events/soap-making/album/slides/IMG_8383.JPG',
 '/static/images/events/soap-making/album/slides/IMG_8384.JPG',
 '/static/images/events/soap-making/album/slides/IMG_8385.JPG',
-	],
+  ],
   },
   'opening': {
     'title': u'夢12開幕',
@@ -265,16 +265,6 @@ D_EVENTS = {
 '/static/images/events/opening/album/slides/DSC_1103.JPG',
 ],
   },
-}
-
-
-D_EXHIBIT = {
-  'title': u'金權盛世-熱帶雨林篇',
-  'subtitle': u'藝術家洪天宇個展',
-  'dates': '11/10 - 12/10',
-  'description': u'藝術家洪天宇個展：金權盛世-熱帶雨林篇，將於11.10（六）下午三點開幕，藝術家現場親自導覧，展期一個月。',
-  'image': u'/static/images/exhibits/洪天宇_滴血的歡樂.jpg',
-  'artist': 'tien-yu-hung',
 }
 
 
