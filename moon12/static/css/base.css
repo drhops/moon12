@@ -16,7 +16,7 @@ body {
 
 a img {
     border:none;
-	outline:none;
+  outline:none;
 }
 
 .rounded {
@@ -166,6 +166,11 @@ a img {
 
 /* EXHIBITS */
 .exhibit-current {
+  text-align: center;
+  margin: 15px 0px auto;
+}
+
+.exhibit-upcoming {
   text-align: center;
   margin: 15px 0px auto;
 }

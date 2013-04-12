@@ -1,4 +1,4 @@
-from artful.models import Artist, D_EVENTS, D_EXHIBIT, Image
+from artful.models import Artist, D_EVENTS, Image
 from moon12.urls import render_to_response
 from collections import OrderedDict
 
@@ -15,17 +15,15 @@ def getArtistsData():
   return dArtists
 
 def appendBeforeFileExtension(filename, appendage):
-	lsPieces = filename.rsplit('.', 2)
-	lsPieces[0] = "%s%s" % (lsPieces[0], appendage)
-	return '.'.join(lsPieces)
+  lsPieces = filename.rsplit('.', 2)
+  lsPieces[0] = "%s%s" % (lsPieces[0], appendage)
+  return '.'.join(lsPieces)
 
 def root(request):
   dArtists = getArtistsData()
   lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
 
   dData = {
-    'dCurrentExhibit': D_EXHIBIT,
-    'dCurrentExhibitArtist': dArtists[D_EXHIBIT['artist']],
     'dArtists': dArtists,
     'lsArtists': lsArtists,
     'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['dates'], reverse=True)),
@@ -49,11 +47,7 @@ def events(request):
   return render_to_response('events.html', dData)
 
 def exhibits(request):
-  sCurrentArtistId = D_EXHIBIT['artist']
   dData = {
-    'dCurrentExhibit': D_EXHIBIT,
-    'dCurrentArtist': Artist.objects.get(username=sCurrentArtistId),
-    'sCurrentArtistId': sCurrentArtistId,
   }
   return render_to_response('exhibits.html', dData)
 
@@ -84,10 +78,10 @@ def event_photos(request, sEventId):
   dEvent = D_EVENTS.get(sEventId)
   dEvent['ldImages'] = []
   for image in dEvent.get('images'):
-  	dEvent['ldImages'].append({
-  	  'image': image.replace('/album/slides', ''),
-  	  'slide': image,
-  	})
+    dEvent['ldImages'].append({
+      'image': image.replace('/album/slides', ''),
+      'slide': image,
+    })
 
   dData = {
     'dEvent': dEvent,
