@@ -3,11 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<!-- saved from url=(0014)about:internet -->
 <head>
-		<meta name="generator" content="jAlbum 10 with the galleriffic skin"/>
+		<meta name="generator" content="jAlbum 11 with the galleriffic skin"/>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>
-			My Cool Site &raquo;
-			wong-ming-ya
+			ming-yai-wen
 		</title>
 
 		<link rel="stylesheet" href="res/galleriffic.css" type="text/css" />
@@ -32,13 +31,19 @@
 			height: 576px;
 		}
 
-		div.caption-container {
-			height: 546px;
+		ul.meta li {
+			width: 207px;
 		}
+
+		div.navigation-container {
+			width: 290px;
+			margin-top: 27px;
+		}
+
 		div.caption-container,
 		span.image-caption {
-			width: 290px;
-		}		
+			width: 544px;
+		}
 		
 		</style>
 
@@ -55,97 +60,12 @@
 		<div id="page">
 			<div id="container">
 				<div id="header">
-					<h1>
-						My Cool Site
-					</h1>
 					<h2>
-						wong-ming-ya
+						ming-yai-wen
 					</h2>
 				</div>
 
 				<div class="content">
-						<div class="navigation-container">
-		<div id="thumbs" class="navigation">
-			<a class="pageLink prev" style="visibility: hidden;" href="#" title="&lsaquo; Prev"></a>
-			<ul class="thumbs noscript">
-				<li>
-					<a class="thumb" href="slides/翁明崖_1-2.jpg" title="翁明崖_1-2">
-						<img src="thumbs/翁明崖_1-2.jpg" alt="翁明崖_1-2" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_1-2</div>
-						<div class="image-desc">
-							<strong>September 17, 2009 11:37 AM</strong>
-							<p>                               </p>
-							
-						</div>
-					</div>
-				</li>
-				<li>
-					<a class="thumb" href="slides/翁明崖_1-3.jpg" title="翁明崖_1-3">
-						<img src="thumbs/翁明崖_1-3.jpg" alt="翁明崖_1-3" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_1-3</div>
-						<div class="image-desc">
-							<strong>September 17, 2009 11:42 AM</strong>
-							<p>                               </p>
-							
-						</div>
-					</div>
-				</li>
-				<li>
-					<a class="thumb" href="slides/翁明崖_2.jpg" title="翁明崖_2">
-						<img src="thumbs/翁明崖_2.jpg" alt="翁明崖_2" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_2</div>
-						<div class="image-desc">
-							<strong>April 24, 2012 10:46 AM</strong>
-							
-						</div>
-					</div>
-				</li>
-				<li>
-					<a class="thumb" href="slides/翁明崖_3.jpg" title="翁明崖_3">
-						<img src="thumbs/翁明崖_3.jpg" alt="翁明崖_3" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_3</div>
-						<div class="image-desc">
-							<strong></strong>
-							
-						</div>
-					</div>
-				</li>
-				<li>
-					<a class="thumb" href="slides/翁明崖_7.jpg" title="翁明崖_7">
-						<img src="thumbs/翁明崖_7.jpg" alt="翁明崖_7" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_7</div>
-						<div class="image-desc">
-							<strong></strong>
-							
-						</div>
-					</div>
-				</li>
-				<li>
-					<a class="thumb" href="slides/翁明崖_8.jpg" title="翁明崖_8">
-						<img src="thumbs/翁明崖_8.jpg" alt="翁明崖_8" width="90" height="90" />
-					</a>
-					<div class="caption">
-						<div class="image-title">翁明崖_8</div>
-						<div class="image-desc">
-							<strong></strong>
-							
-						</div>
-					</div>
-				</li>
-			</ul>
-			<a class="pageLink next" style="visibility: hidden;" href="#" title="Next &rsaquo;"></a>
-		</div>
-	</div>
 					<div class="slideshow-container">
 						<div id="controls" class="controls"></div>
 						<div id="loading" class="loader"></div>
@@ -181,7 +101,6 @@
 				});
 				
 				var gallery = $('#thumbs').galleriffic({
-					delay:                  3000,
 					preloadAhead:           10,
 						numThumbs:              8,
 						enableTopPager:         false,
@@ -191,12 +110,6 @@
 					captionContainerSel:    '#caption',
 					loadingContainerSel:    '#loading',
 					renderSSControls:       true,
-					playLinkText:           'Play',
-					pauseLinkText:          'Pause',
-					prevLinkText:           'Previous',
-					nextLinkText:           'Next',
-					nextPageLinkText:       'Next &rsaquo;',
-					prevPageLinkText:       '&lsaquo; Prev',
 					enableHistory:          true,
 					autoStart:              false,
 					syncTransitions:           true,
@@ -212,38 +125,11 @@
 						this.fadeTo('fast', 0.0, callback);
 					},
 					onPageTransitionIn:        function() {
-						
-
-						var prevPageLink = this.find('a.prev').css('visibility', 'hidden');
-						var nextPageLink = this.find('a.next').css('visibility', 'hidden');
-						
-						// Show appropriate next / prev page links
-						if (this.displayedPage > 0)
-							prevPageLink.css('visibility', 'visible');
-
-						var lastPage = this.getNumPages() - 1;
-						if (this.displayedPage < lastPage)
-							nextPageLink.css('visibility', 'visible');
-
 
 						this.fadeTo('fast', 1.0);
 					}
 				});
 
-				
-				/**************** Event handlers for custom next / prev page links **********************/
-
-				gallery.find('a.prev').click(function(e) {
-					gallery.previousPage();
-					e.preventDefault();
-				});
-
-				gallery.find('a.next').click(function(e) {
-					gallery.nextPage();
-					e.preventDefault();
-				});
-
-				/****************************************************************************************/
 
 				
 				/**** Functions to support integration of galleriffic with the jquery.history plugin ****/
@@ -287,15 +173,15 @@
 		</script>
 		
 	<div id="jalbumwidgetcontainer"></div>
-<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+<script type="text/javascript"><!--//--><![CDATA[//><!--
 _jaSkin = "galleriffic";
 _jaStyle = "black.css";
-_jaVersion = "10.10.7";
+_jaVersion = "11";
 _jaGeneratorType = "desktop";
 _jaLanguage = "en";
 _jaPageType = "index";
 _jaRootPath = ".";
-_jaGuid = "1353059940455";
+_jaGuid = "1363579180516";
 var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "http://jalbum.net/widgetapi/load.js";

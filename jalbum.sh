@@ -14,5 +14,9 @@ echo $1
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 IMG_DIR="$DIR/moon12/artful/static/images/$1"
-#java -jar /usr/share/jalbum/JAlbum.jar -help
+
+# use lowercase file extension
+find $IMG_DIR -name "*.JPG" | xargs rename s/\.JPG/\.jpg/
+
+# transform images into additional formats
 java -jar /usr/share/jalbum/JAlbum.jar -directory $IMG_DIR -outputDirectory $IMG_DIR/album -skin galleriffic
