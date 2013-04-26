@@ -13,7 +13,10 @@ EMAIL_MAX_LENGTH = 25
 D_EVENTS = {
   'opening-0414': {
     'title': u'吳怡蒨個展開幕',
-    'dates': '3/14',
+    'description': u"""感謝各界愛好藝文的親朋好友大力支持，
+吳怡蒨老師的個展「城市拼圖」開幕圓滿順利。
+在都會裡透過對藝術熱絡的交流，添加一片美好。""",
+    'dates': '4/14',
     'show': True,
     'future': False,
     'image': '/static/images/events/opening-0414/album/slides/IMG_8963.jpg',
