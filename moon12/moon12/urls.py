@@ -1,6 +1,6 @@
 from coffin import shortcuts
-from coffin.conf.urls.defaults import patterns, url
-from django.conf.urls.defaults import include
+from coffin.conf.urls import patterns, url
+from django.conf.urls import include
 from django.contrib import admin
 from django.http import HttpResponse
 import jinja2

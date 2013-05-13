@@ -62,7 +62,8 @@ STATIC_ROOT = os.path.join(ROOT_PATH, '../static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
+STATIC_URL = 'http://s3-ap-northeast-1.amazonaws.com/moon12-all/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -126,6 +127,8 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -136,9 +139,6 @@ INSTALLED_APPS = (
     'gunicorn',
     'south',
     'storages',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-    'django.contrib.staticfiles',
 )
 
 # A sample logging configuration. The only tangible logging

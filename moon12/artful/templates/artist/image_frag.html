@@ -1,18 +1,18 @@
 {% set c = context() %}
 
 <li>
-	<a class="thumb" href="{{ c.dImage.source_slide }}" title="{{ c.dImage.title }}">
-		<img src="{{ c.dImage.source_thumb }}" alt="{{ c.dImage.title }}" width="90" height="90" />
-	</a>
-	<div class="caption">
-		<div>
-		<div style="display:inline;" class="image-title">{{ c.dImage.title }}</div>
-		<span class="image-year"> {{ c.dImage.year }}</span>
-		</div>
-		<div class="image-medim">{{ c.dImage.medium|safe }} {{ c.dImage.dimensions|safe }}</div>
-		<div class="image-desc">{{ c.dImage.description|safe }}</div>
-		<div class="download">
-			<a href="{{ c.dImage.source_image }}">view fullsize</a>
-		</div>
-	</div>
+  <a class="thumb" href="{% static c.dImage.source_slide %}" title="{{ c.dImage.title }}">
+    <img src="{% static c.dImage.source_thumb %}" alt="{{ c.dImage.title }}" width="90" height="90" />
+  </a>
+  <div class="caption">
+    <div>
+    <div style="display:inline;" class="image-title">{{ c.dImage.title }}</div>
+    <span class="image-year"> {{ c.dImage.year }}</span>
+    </div>
+    <div class="image-medim">{{ c.dImage.medium|safe }} {{ c.dImage.dimensions|safe }}</div>
+    <div class="image-desc">{{ c.dImage.description|safe }}</div>
+    <div class="download">
+      <a href="{% static c.dImage.source_image %}">view fullsize</a>
+    </div>
+  </div>
 </li>

@@ -67,9 +67,9 @@ def getArtistData(sArtistId):
 
   for mImage in lmImages:
     sSource = mImage.source
-    mImage.source_image = '/static/images/artists/%s/album/%s' % (sArtistId, sSource)
-    mImage.source_thumb = '/static/images/artists/%s/album/thumbs/%s' % (sArtistId, sSource)
-    mImage.source_slide = '/static/images/artists/%s/album/slides/%s' % (sArtistId, sSource)
+    mImage.source_image = 'images/artists/%s/album/%s' % (sArtistId, sSource)
+    mImage.source_thumb = 'images/artists/%s/album/thumbs/%s' % (sArtistId, sSource)
+    mImage.source_slide = 'images/artists/%s/album/slides/%s' % (sArtistId, sSource)
 
   mArtist.images = lmImages
   return mArtist

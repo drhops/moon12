@@ -3,16 +3,16 @@
 <a href="/artist/{{ c.sArtistId }}/gallery">
 <div class="artist-section">
   <div class="pull-left">
-  	<img class="artist-image rounded" src="{{ c.dArtist.home_image_70 }}"/>
-	  <div class="clearfix"></div>
+    <img class="artist-image rounded" src="{% static c.dArtist.home_image_70 %}" />
+    <div class="clearfix"></div>
   </div>
   <div class="artist-name pull-left">
-  	<div class="cell">
-  	<div class="content">
-  	{{ c.dArtist.full_name }}
-  	</div>
-  	</div>
-	  <div class="clearfix"></div>
+    <div class="cell">
+    <div class="content">
+    {{ c.dArtist.full_name }}
+    </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>
 </div>

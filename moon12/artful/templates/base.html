@@ -5,14 +5,14 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta property="og:title" content="夢12 美學空間" />
     <meta property="og:site_name" content="夢12 美學空間" />
     <meta property="og:description" content="夢12 美學空間"/>
     <meta property="viewport" content="width=device-width" />
 
-		<link rel="stylesheet" href="/static/css/gallery/styles.css" type="text/css" />
-		<link rel="stylesheet" href="/static/css/base.css" type="text/css">
+    <link rel="stylesheet" href="{% static "css/gallery/styles.css" %}" type="text/css" />
+    <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css">
 
     {% block libs %}
     {% endblock %}
@@ -24,7 +24,7 @@
     {% endblock %}
   </head>
   <body>
-		{% include 'header_frag.html' %}
+    {% include 'header_frag.html' %}
 
     {% block loader %}
     {% endblock %}
@@ -32,9 +32,9 @@
     {% block content %}
     {% endblock %}
 
-		{% block body %}
-		{% endblock %}
+    {% block body %}
+    {% endblock %}
 
-		{% include 'footer_frag.html' %}
+    {% include 'footer_frag.html' %}
   </body>
 </html>
