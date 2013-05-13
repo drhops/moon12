@@ -113,7 +113,7 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-                                                                                                                                     
+
 ROOT_URLCONF = 'moon12.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -135,8 +135,10 @@ INSTALLED_APPS = (
     'coffin',
     'gunicorn',
     'south',
+    'storages',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.staticfiles',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -176,3 +178,10 @@ JINJA2_FILTERS = (
 )
 
 SERIALIZATION_MODULES = {'json-pretty': 'moon12.serializers.pretty_json'}
+
+# django-storages
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = 'AKIAJXRAUC6ZFCH5UKVQ'
+#AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = 'moon12-all'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
