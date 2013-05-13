@@ -63,7 +63,7 @@ STATIC_ROOT = os.path.join(ROOT_PATH, '../static')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 # STATIC_URL = '/static/'
-STATIC_URL = 'http://s3-ap-northeast-1.amazonaws.com/moon12-all/static/'
+STATIC_URL = 'http://s3-ap-northeast-1.amazonaws.com/moon12-all/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
