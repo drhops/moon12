@@ -12,14 +12,14 @@ EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
   'event-0421': {
-    'title': u'',
+    'title': u'吳怡蒨老師與龍安國小資優班學生相約',
     'description': u"""吳怡蒨老師與龍安國小資優班學生相約在夢12。
 在美好的藝術空間，經歷了難得的美感洗禮。
 結合社區藝術與機會教育，推廣城市新美學。""",
     'dates': '4/21',
     'show': True,
     'future': False,
-    'image': 'images/events/event-0421/album/slides/IMG_8963.jpg',
+    'image': 'images/events/event-0421/album/slides/IMG_8988.jpg',
     'images': [
 'images/events/event-0421/album/slides/IMG_8984.jpg',
 'images/events/event-0421/album/slides/IMG_8985.jpg',
