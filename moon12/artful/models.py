@@ -11,6 +11,40 @@ from django.db import models
 EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
+  'event-0421': {
+    'title': u'',
+    'description': u"""吳怡蒨老師與龍安國小資優班學生相約在夢12。
+在美好的藝術空間，經歷了難得的美感洗禮。
+結合社區藝術與機會教育，推廣城市新美學。""",
+    'dates': '4/21',
+    'show': True,
+    'future': False,
+    'image': 'images/events/event-0421/album/slides/IMG_8963.jpg',
+    'images': [
+'images/events/event-0421/album/slides/IMG_8984.jpg',
+'images/events/event-0421/album/slides/IMG_8985.jpg',
+'images/events/event-0421/album/slides/IMG_8986.jpg',
+'images/events/event-0421/album/slides/IMG_8987.jpg',
+'images/events/event-0421/album/slides/IMG_8988.jpg',
+'images/events/event-0421/album/slides/IMG_8989.jpg',
+'images/events/event-0421/album/slides/IMG_8990.jpg',
+'images/events/event-0421/album/slides/IMG_8991.jpg',
+'images/events/event-0421/album/slides/IMG_8992.jpg',
+'images/events/event-0421/album/slides/IMG_8993.jpg',
+'images/events/event-0421/album/slides/IMG_8994.jpg',
+'images/events/event-0421/album/slides/IMG_8995.jpg',
+'images/events/event-0421/album/slides/IMG_8996.jpg',
+'images/events/event-0421/album/slides/IMG_8997.jpg',
+'images/events/event-0421/album/slides/IMG_8998.jpg',
+'images/events/event-0421/album/slides/IMG_8999.jpg',
+'images/events/event-0421/album/slides/IMG_9000.jpg',
+'images/events/event-0421/album/slides/IMG_9001.jpg',
+'images/events/event-0421/album/slides/IMG_9002.jpg',
+'images/events/event-0421/album/slides/IMG_9003.jpg',
+'images/events/event-0421/album/slides/IMG_9004.jpg',
+'images/events/event-0421/album/slides/IMG_9005.jpg',
+],
+  },
   'opening-0414': {
     'title': u'吳怡蒨個展開幕',
     'description': u"""感謝各界愛好藝文的親朋好友大力支持，
@@ -77,7 +111,7 @@ D_EVENTS = {
     'title': u'台中教育大學藝術交流',
     'description': u'感謝台中教育大學林欽賢教授的邀請，執行長王月琴小姐赴台中與美術系的同學們進行了一場別開生面的藝術交流，相信美學的種子，將在每個角落開花結果。',
     'dates': '12/25',
-    'show': True,
+    'show': False,
     'future': False,
     'image': 'images/events/art-exchange.jpg',
     'images': [
