@@ -17,6 +17,7 @@ IMG_DIR="$DIR/moon12/artful/static/images/$1"
 
 # use lowercase file extension
 find $IMG_DIR -name "*.JPG" | xargs rename s/\.JPG/\.jpg/
+find $IMG_DIR -name "*.jpg" -print0 | xargs -0 rename 's/ /_/'
 
 # transform images into additional formats
 java -jar /usr/share/jalbum/JAlbum.jar -directory $IMG_DIR -outputDirectory $IMG_DIR/album -skin galleriffic
