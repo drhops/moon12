@@ -11,6 +11,28 @@ from django.db import models
 EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
+  'event-0430': {
+    'title': u'執行長赴台中教育大學演講',
+    'description': u"""夢12 美學空間王月琴執行長於四月三十日，受邀於台中教育大學美術系專題講座。
+講座主題：別讓夢想等太久，討論創意的動機、來源、過程、典範，
+並與同學們一起透視藝術世界的奧祕""",
+    'dates': '4/30',
+    'show': True,
+    'future': False,
+    'image': 'images/events/event-0430/album/slides/DSC_0530.jpg',
+    'images': [
+'images/events/event-0430/album/slides/DSC_0516.jpg',
+'images/events/event-0430/album/slides/DSC_0519.jpg',
+'images/events/event-0430/album/slides/DSC_0521.jpg',
+'images/events/event-0430/album/slides/DSC_0522.jpg',
+'images/events/event-0430/album/slides/DSC_0525.jpg',
+'images/events/event-0430/album/slides/DSC_0526.jpg',
+'images/events/event-0430/album/slides/DSC_0527.jpg',
+'images/events/event-0430/album/slides/DSC_0528.jpg',
+'images/events/event-0430/album/slides/DSC_0529.jpg',
+'images/events/event-0430/album/slides/DSC_0530.jpg',
+],
+  },
   'event-0421': {
     'title': u'吳怡蒨老師與龍安國小資優班學生相約',
     'description': u"""吳怡蒨老師與龍安國小資優班學生相約在夢12。
@@ -51,7 +73,7 @@ D_EVENTS = {
 吳怡蒨老師的個展「城市拼圖」開幕圓滿順利。
 在都會裡透過對藝術熱絡的交流，添加一片美好。""",
     'dates': '4/14',
-    'show': True,
+    'show': False,
     'future': False,
     'image': 'images/events/opening-0414/album/slides/IMG_8963.jpg',
     'images': [
