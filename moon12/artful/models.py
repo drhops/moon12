@@ -11,6 +11,43 @@ from django.db import models
 EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
+  'event-0520': {
+    'title': u'2013 Young Art Taipei',
+    'description': u"""謝謝每位參觀的朋友們。夢12第一次參加Young Art Taipei ，
+在這次的活動中學習到很多寶貴經驗，也認識了很多與我們一樣
+愛好藝術的朋友。請大家在未來也要繼續支持我們唷！""",
+    'dates': '5/20',
+    'show': True,
+    'future': False,
+    'image': 'images/events/event-0520/0520_(25).jpg',
+    'images': [
+'images/events/event-0520/0520_(20).jpg',
+'images/events/event-0520/0520_(10).jpg',
+'images/events/event-0520/0520_(11).jpg',
+'images/events/event-0520/0520_(18).jpg',
+'images/events/event-0520/0520_(25).jpg',
+'images/events/event-0520/0520_(1).jpg',
+'images/events/event-0520/0520_(23).jpg',
+'images/events/event-0520/0520_(9).jpg',
+'images/events/event-0520/0520_(24).jpg',
+'images/events/event-0520/0520_(2).jpg',
+'images/events/event-0520/0520_(5).jpg',
+'images/events/event-0520/0520_(19).jpg',
+'images/events/event-0520/0520_(7).jpg',
+'images/events/event-0520/0520_(21).jpg',
+'images/events/event-0520/0520_(3).jpg',
+'images/events/event-0520/0520_(22).jpg',
+'images/events/event-0520/0520_(6).jpg',
+'images/events/event-0520/0520_(8).jpg',
+'images/events/event-0520/0520_(13).jpg',
+'images/events/event-0520/0520_(14).jpg',
+'images/events/event-0520/0520_(16).jpg',
+'images/events/event-0520/0520_(4).jpg',
+'images/events/event-0520/0520_(12).jpg',
+'images/events/event-0520/0520_(17).jpg',
+'images/events/event-0520/0520_(15).jpg',
+    ],
+  },
   'event-0430': {
     'title': u'執行長赴台中教育大學演講',
     'description': u"""夢12 美學空間王月琴執行長於四月三十日，受邀於台中教育大學美術系專題講座。
@@ -39,7 +76,7 @@ D_EVENTS = {
 在美好的藝術空間，經歷了難得的美感洗禮。
 結合社區藝術與機會教育，推廣城市新美學。""",
     'dates': '4/21',
-    'show': True,
+    'show': False,
     'future': False,
     'image': 'images/events/event-0421/album/slides/IMG_8988.jpg',
     'images': [
