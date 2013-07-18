@@ -116,7 +116,7 @@ u'images/events/曾美禎文學與藝術對談/album/slides/IMG_9233.jpg',
   u'曾美禎個展開幕': {
     'title': u'曾美禎個展開幕',
     'description': u"""6/8的午後，曾美禎個展於夢12美學空間開幕，同時發表手工版畫書與紀錄片，一同體會曾美禎老師精彩細膩的藝術魅力！""",
-    'dates': '6/8',
+    'dates': '6/08',
     'show': True,
     'future': False,
     'image': u'images/events/曾美禎個展開幕/album/slides/IMG_9058.jpg',
