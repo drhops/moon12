@@ -12,9 +12,9 @@ EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
   u'曾美禎文學與藝術對談': {
-    'title': u'曾美禎文學與藝術對談',
-    'description': u"""Description""",
-    'dates': '6/1',
+    'title': u'藝術與文學對談：曾美禎+楊茂秀',
+    'description': u"""6/15的午後，在夢12展開了一場別開生面的溫馨對談，由曾美禎、楊茂秀兩位老師主持，趣味橫生，從版畫書的緣起談到藝術帶來的音樂性，相信每位來訪的朋友都能得到滿滿的收穫！""",
+    'dates': '6/15',
     'show': True,
     'future': False,
     'image': u'images/events/曾美禎文學與藝術對談/album/slides/IMG_9229.jpg',
@@ -115,8 +115,8 @@ u'images/events/曾美禎文學與藝術對談/album/slides/IMG_9233.jpg',
   ]},
   u'曾美禎個展開幕': {
     'title': u'曾美禎個展開幕',
-    'description': u"""Description""",
-    'dates': '6/1',
+    'description': u"""6/8的午後，曾美禎個展於夢12美學空間開幕，同時發表手工版畫書與紀錄片，一同體會曾美禎老師精彩細膩的藝術魅力！""",
+    'dates': '6/8',
     'show': True,
     'future': False,
     'image': u'images/events/曾美禎個展開幕/album/slides/IMG_9058.jpg',
