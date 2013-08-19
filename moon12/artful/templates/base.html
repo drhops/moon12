@@ -31,6 +31,10 @@ mixpanel.init("017dc7ff03fc12977dd7dc0c331b763d");</script>
     {% endblock %}
   </head>
   <body>
+    <script type="text/javascript">
+    mixpanel.track("Page View", {"URL": document.URL});
+    </script>
+
     {% include 'header_frag.html' %}
 
     {% block loader %}
