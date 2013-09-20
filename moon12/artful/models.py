@@ -17,7 +17,7 @@ D_EVENTS = {
     'dates': '9/08',
     'show': True,
     'future': False,
-    'image': u'images/events/kuo_opening/album/slides/IMG_0711.jpg',
+    'image': u'images/events/kuo_opening/album/slides/IMG_0734.jpg',
     'images': [
 u'images/events/kuo_opening/album/slides/IMG_0711.jpg',
 u'images/events/kuo_opening/album/slides/IMG_0712.jpg',
