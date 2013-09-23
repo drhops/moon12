@@ -1,6 +1,8 @@
 from artful.models import Artist, D_EVENTS, Image
 from moon12.urls import render_to_response
 from collections import OrderedDict
+from datetime import datetime
+import re
 
 def getArtistsData():
   lmArtists = Artist.objects.all()
@@ -19,6 +21,18 @@ def appendBeforeFileExtension(filename, appendage):
   lsPieces[0] = "%s%s" % (lsPieces[0], appendage)
   return '.'.join(lsPieces)
 
+def parseDate(sDate):
+  sDate = re.split('[ -]', sDate)[0]
+  try:
+    return datetime.strptime(sDate, "%m/%d/%y").date()
+  except ValueError, unused_e:
+    try:
+      sDate += '/13' #hardcode '13 until we update dates in models.py for new year
+      return datetime.strptime(sDate, "%m/%d/%y").date()
+    except ValueError, e:
+      print 'sDate:%s' % sDate
+      raise e
+
 def root(request):
   dArtists = getArtistsData()
   lsArtists = [mArtist.username for mArtist in Artist.objects.all().order_by('display_order')]
@@ -26,7 +40,7 @@ def root(request):
   dData = {
     'dArtists': dArtists,
     'lsArtists': lsArtists,
-    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['dates'], reverse=True)),
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
   }
   return render_to_response('home.html', dData)
 
@@ -40,9 +54,9 @@ def events(request):
   dFutureEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') == True)
   dPastEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') != True)
   dData = {
-    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['dates'], reverse=True)),
-    'dFutureEvents': OrderedDict(sorted(dFutureEvents.items(), key= lambda x: x[1]['dates'], reverse=True)),
-    'dPastEvents': OrderedDict(sorted(dPastEvents.items(), key= lambda x: x[1]['dates'], reverse=True)),
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
+    'dFutureEvents': OrderedDict(sorted(dFutureEvents.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
+    'dPastEvents': OrderedDict(sorted(dPastEvents.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
   }
   return render_to_response('events.html', dData)
 
