@@ -12,8 +12,8 @@ EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
   u'kuo_opening': {
-    'title': u'Kuo\'s Opening',
-    'description': u"""Description""",
+    'title': u'澹雨寂光-柯偉國個展開幕',
+    'description': u"""9/8星期日的午後，柯偉國的個展--澹雨寂光於夢十二美學空間開幕! 現場除了柯偉國老師本人與來賓們導覽介紹作品外，也邀請到了朱銘美術館的策展人—林振莖，來和各位朋友談談現代水墨的創作內涵。秋天的腳步近了，在微涼的天氣裡欣賞柯偉國水墨作品，清新淡雅的氛圍帶給大家不同以往的視覺饗宴！""",
     'dates': '9/08',
     'show': True,
     'future': False,
