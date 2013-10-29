@@ -19,7 +19,7 @@ D_EVENTS = {
     'dates': '10/5',
     'show': True,
     'future': False,
-    'image': u'',
+    'image': u'images/events/liu-yung-jen-opening/album/slides/P1200614.jpg',
     'images': [
 u'images/events/liu-yung-jen-opening/album/slides/P1200608.jpg',
 u'images/events/liu-yung-jen-opening/album/slides/P1200614.jpg',
