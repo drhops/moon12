@@ -12,8 +12,8 @@ EMAIL_MAX_LENGTH = 25
 
 D_EVENTS = {
   u'opening-2013-12-7': {
-    'title': u'翁明哲個展-記憶的牆 開幕茶會',
-    'description': u'''''',
+    'title': u'翁明哲個展-記憶的牆開幕茶會',
+    'description': u'''藝術家翁明哲以鮮明的色彩揮灑出印象派的油畫作品，此次展出記憶中身旁的人物和風景，用畫布和畫筆捕捉每個生命中美好的片刻。''',
     'dates': '12/7',
     'show': True,
     'future': False,
@@ -44,8 +44,8 @@ u'images/events/opening-2013-12-7/album/slides/DSC_0199.jpg',
     ],
   },
   u'opening-2013-11-2': {
-    'title': u'洪天宇個展-風景線 開幕茶會',
-    'description': u'''''',
+    'title': u'洪天宇個展-風景線開幕茶會',
+    'description': u'''洪天宇於2013個展《風景線》帶來最新的寫實風景畫作，其中探討台灣的大自然生態變遷與人類文明破壞等議題，嶄露出藝術家對於生命的關懷。''',
     'dates': '11/2',
     'show': True,
     'future': False,
