@@ -40,7 +40,7 @@ def root(request):
   dData = {
     'dArtists': dArtists,
     'lsArtists': lsArtists,
-    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['order_date'], reverse=True)),
   }
   return render_to_response('home.html', dData)
 
@@ -54,9 +54,9 @@ def events(request):
   dFutureEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') == True)
   dPastEvents = dict((k,v) for k,v in D_EVENTS.iteritems() if v.get('future') != True)
   dData = {
-    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
-    'dFutureEvents': OrderedDict(sorted(dFutureEvents.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
-    'dPastEvents': OrderedDict(sorted(dPastEvents.items(), key= lambda x: parseDate(x[1]['dates']), reverse=True)),
+    'dEvents': OrderedDict(sorted(D_EVENTS.items(), key= lambda x: x[1]['order_date'], reverse=True)),
+    'dFutureEvents': OrderedDict(sorted(dFutureEvents.items(), key= lambda x: x[1]['order_date'], reverse=True)),
+    'dPastEvents': OrderedDict(sorted(dPastEvents.items(), key= lambda x: x[1]['order_date'], reverse=True)),
   }
   return render_to_response('events.html', dData)
 
