@@ -16,7 +16,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 IMG_DIR="$DIR/moon12/artful/static/images/$1"
 
 # use lowercase file extension
-find $IMG_DIR -name "*.JPG" | xargs rename s/\.JPG/\.jpg/
+find $IMG_DIR -name "*.JPG" -print0 | xargs -0 rename 's/\.JPG/\.jpg/'
+find $IMG_DIR -name "*.JPEG" -print0 | xargs -0 rename 's/\.JPEG/\.jpg/'
+find $IMG_DIR -name "*.jpeg" -print0 | xargs -0 rename 's/\.jpeg/\.jpeg/'
 find $IMG_DIR -name "*.jpg" -print0 | xargs -0 rename 's/ /_/g'
 find $IMG_DIR -name "*.jpg" -print0 | xargs -0 rename 's/__/_/g'
 find $IMG_DIR -name "*.jpg" -print0 | xargs -0 rename 's/#/N/g'
