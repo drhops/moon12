@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Runner script for jAlbum.
 # @author drhops@gmail.com (Dan Hopkins)
 
