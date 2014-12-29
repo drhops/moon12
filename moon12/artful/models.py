@@ -18,7 +18,7 @@ D_EVENTS = {
     'order_date': '2014/11/08',
     'show': True,
     'future': False,
-    'image': u'images/events/opening-2014-10-5/album/slides/DSC02080.jpg',
+    'image': u'images/events/opening-2014-11-8/album/slides/DSC02232.jpg',
     'images': [
 u'images/events/opening-2014-11-8/album/slides/DSC02204.jpg',
 u'images/events/opening-2014-11-8/album/slides/DSC02213.jpg',
